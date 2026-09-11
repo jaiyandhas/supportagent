@@ -37,17 +37,20 @@ def compute_intent_metrics(y_true: List[str], y_pred: List[str]) -> Dict:
     # Worst class
     worst_class = None
     worst_f1 = 1.0
+    worst_support = 0
     for cls_name, score in per_class_f1.items():
         if score < worst_f1:
             worst_f1 = score
             worst_class = cls_name
+            worst_support = int(report[cls_name].get("support", 0))
 
     return {
         "accuracy": round(acc, 3),
         "macro_f1": round(macro_f1, 3),
         "per_class_f1": per_class_f1,
         "worst_class": worst_class,
-        "worst_class_f1": round(worst_f1, 3)
+        "worst_class_f1": round(worst_f1, 3),
+        "worst_class_support": worst_support
     }
 
 

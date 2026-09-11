@@ -158,7 +158,8 @@ def run_full_evaluation(golden_path: str = "data/golden_eval_set.json", output_p
                 p_item.drafted_reply,
                 [cand.model_dump() for cand in p_item.precedents],
                 g_item["reference_reply_guidelines"],
-                p_item.escalation.should_escalate
+                p_item.escalation.should_escalate,
+                gold_should_escalate=g_item["gold_should_escalate"]
             )
             judge_scores.append(j_eval)
 
@@ -187,6 +188,53 @@ def run_full_evaluation(golden_path: str = "data/golden_eval_set.json", output_p
             }
         }
 
+    # Pairwise win-rate comparison: Trust-First vs Trivial and Trust-First vs Simple
+    trust_preds = systems["calibrated_trust_first"]["results"]
+    triv_preds = systems["trivial_baseline"]["results"]
+    simp_preds = systems["simple_baseline"]["results"]
+
+    pairwise_vs_trivial = {"win": 0, "tie": 0, "loss": 0}
+    pairwise_vs_simple = {"win": 0, "tie": 0, "loss": 0}
+
+    for g_item, t_p, tr_p, s_p in zip(golden_set, triv_preds, trust_preds, simp_preds):
+        q = g_item["customer_query"]
+        gold_esc = g_item["gold_should_escalate"]
+        score_triv = judge.evaluate_reply(q, t_p.drafted_reply, [], "", t_p.escalation.should_escalate, gold_esc)["overall_score"]
+        score_simp = judge.evaluate_reply(q, s_p.drafted_reply, [c.model_dump() for c in s_p.precedents], "", s_p.escalation.should_escalate, gold_esc)["overall_score"]
+        score_trust = judge.evaluate_reply(q, tr_p.drafted_reply, [c.model_dump() for c in tr_p.precedents], "", tr_p.escalation.should_escalate, gold_esc)["overall_score"]
+
+        # vs Trivial
+        if score_trust > score_triv + 0.25:
+            pairwise_vs_trivial["win"] += 1
+        elif score_triv > score_trust + 0.25:
+            pairwise_vs_trivial["loss"] += 1
+        else:
+            pairwise_vs_trivial["tie"] += 1
+
+        # vs Simple
+        if score_trust > score_simp + 0.25:
+            pairwise_vs_simple["win"] += 1
+        elif score_simp > score_trust + 0.25:
+            pairwise_vs_simple["loss"] += 1
+        else:
+            pairwise_vs_simple["tie"] += 1
+
+    total_pairs = len(golden_set)
+    pairwise_results = {
+        "vs_trivial": {
+            "win_rate": round(pairwise_vs_trivial["win"] / total_pairs, 3),
+            "tie_rate": round(pairwise_vs_trivial["tie"] / total_pairs, 3),
+            "loss_rate": round(pairwise_vs_trivial["loss"] / total_pairs, 3),
+            "counts": pairwise_vs_trivial
+        },
+        "vs_simple": {
+            "win_rate": round(pairwise_vs_simple["win"] / total_pairs, 3),
+            "tie_rate": round(pairwise_vs_simple["tie"] / total_pairs, 3),
+            "loss_rate": round(pairwise_vs_simple["loss"] / total_pairs, 3),
+            "counts": pairwise_vs_simple
+        }
+    }
+
     # Retrieval impact study
     print("Evaluating retrieval hit-rate impact (before vs. after outcome reranking)...")
     retrieval_impact = evaluate_retrieval_impact(calibrated_engine, golden_set)
@@ -204,6 +252,7 @@ def run_full_evaluation(golden_path: str = "data/golden_eval_set.json", output_p
         "cold_case_count": sum(1 for g in golden_set if g.get("is_cold_case")),
         "borderline_case_count": sum(1 for g in golden_set if g.get("is_borderline")),
         "systems": metrics_summary,
+        "pairwise_comparison": pairwise_results,
         "retrieval_impact": retrieval_impact,
         "judge_human_agreement": judge_agreement
     }

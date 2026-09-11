@@ -293,6 +293,7 @@ def build_precedents_and_gold_set(source: str = "fixture", sample_limit: int = 5
 
         golden_set.append({
             "id": f"eval_gold_{len(golden_set) + 1:03d}",
+            "conversation_id": ec.get("conversation_id", f"conv_{i:04d}"),
             "customer_query": ec["customer_query"],
             "true_coarse_intent": coarse,
             "true_sub_intent": sub,

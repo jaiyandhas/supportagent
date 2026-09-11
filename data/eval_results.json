@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-11T07:10:12Z",
+  "timestamp": "2026-09-11T10:44:34Z",
   "golden_set_size": 180,
   "cold_case_count": 25,
   "borderline_case_count": 10,
@@ -17,7 +17,8 @@
           "product_digital": 0.0
         },
         "worst_class": "abuse_safety",
-        "worst_class_f1": 0.0
+        "worst_class_f1": 0.0,
+        "worst_class_support": 7
       },
       "intent_sub": {
         "accuracy": 0.678,
@@ -38,7 +39,8 @@
           "tracking_status_eta": 0.808
         },
         "worst_class": "aws_iot_enterprise",
-        "worst_class_f1": 0.0
+        "worst_class_f1": 0.0,
+        "worst_class_support": 5
       },
       "escalation": {
         "precision": 0.0,
@@ -245,11 +247,11 @@
         }
       ],
       "judge_rubric": {
-        "faithfulness": 4.0,
-        "tone": 4.5,
-        "resolution_likelihood": 4.5,
+        "faithfulness": 1.66,
+        "tone": 4.8,
+        "resolution_likelihood": 1.68,
         "policy_adherence": 5.0,
-        "overall_score": 4.42
+        "overall_score": 2.64
       }
     },
     "simple_baseline": {
@@ -265,7 +267,8 @@
           "product_digital": 0.286
         },
         "worst_class": "abuse_safety",
-        "worst_class_f1": 0.0
+        "worst_class_f1": 0.0,
+        "worst_class_support": 7
       },
       "intent_sub": {
         "accuracy": 0.722,
@@ -286,7 +289,8 @@
           "tracking_status_eta": 0.833
         },
         "worst_class": "aws_iot_enterprise",
-        "worst_class_f1": 0.0
+        "worst_class_f1": 0.0,
+        "worst_class_support": 5
       },
       "escalation": {
         "precision": 0.201,
@@ -493,11 +497,11 @@
         }
       ],
       "judge_rubric": {
-        "faithfulness": 4.8,
-        "tone": 4.19,
-        "resolution_likelihood": 4.79,
+        "faithfulness": 4.95,
+        "tone": 3.62,
+        "resolution_likelihood": 3.75,
         "policy_adherence": 5.0,
-        "overall_score": 4.67
+        "overall_score": 4.33
       }
     },
     "calibrated_trust_first": {
@@ -513,7 +517,8 @@
           "product_digital": 0.476
         },
         "worst_class": "general_other",
-        "worst_class_f1": 0.0
+        "worst_class_f1": 0.0,
+        "worst_class_support": 10
       },
       "intent_sub": {
         "accuracy": 0.706,
@@ -535,7 +540,8 @@
           "tracking_status_eta": 0.831
         },
         "worst_class": "aws_iot_enterprise",
-        "worst_class_f1": 0.0
+        "worst_class_f1": 0.0,
+        "worst_class_support": 5
       },
       "escalation": {
         "precision": 0.219,
@@ -742,11 +748,33 @@
         }
       ],
       "judge_rubric": {
-        "faithfulness": 4.45,
-        "tone": 4.98,
-        "resolution_likelihood": 4.7,
+        "faithfulness": 4.01,
+        "tone": 4.8,
+        "resolution_likelihood": 3.57,
         "policy_adherence": 5.0,
-        "overall_score": 4.74
+        "overall_score": 4.12
+      }
+    }
+  },
+  "pairwise_comparison": {
+    "vs_trivial": {
+      "win_rate": 1.0,
+      "tie_rate": 0.0,
+      "loss_rate": 0.0,
+      "counts": {
+        "win": 180,
+        "tie": 0,
+        "loss": 0
+      }
+    },
+    "vs_simple": {
+      "win_rate": 0.006,
+      "tie_rate": 0.567,
+      "loss_rate": 0.428,
+      "counts": {
+        "win": 1,
+        "tie": 102,
+        "loss": 77
       }
     }
   },

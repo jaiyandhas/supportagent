@@ -1,6 +1,7 @@
 [
   {
     "id": "eval_gold_001",
+    "conversation_id": "831f5a5e2738f57b79da677d92e60222",
     "customer_query": "I ordered on July 25th. I still do not receive anything and you already charged me. It doesn't let me cancel. Unacceptable. \ud83d\ude21\ud83d\ude21\ud83d\ude21",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -12,6 +13,7 @@
   },
   {
     "id": "eval_gold_002",
+    "conversation_id": "3a1e3266798c00db9b6ed7e5e33bc0e7",
     "customer_query": "pre-ordered the new illustrated Harry Potter in May and it was released yesterday but I still haven't received?!",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -23,6 +25,7 @@
   },
   {
     "id": "eval_gold_003",
+    "conversation_id": "537a6bf2e6a0460cafcf2527b3c5578c",
     "customer_query": "#Order canceled by Amazon India, complaint filed against #Amazon",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -34,6 +37,7 @@
   },
   {
     "id": "eval_gold_004",
+    "conversation_id": "7b6a6b12ff6c6098c26bce4f7dfe3d31",
     "customer_query": "when would this be available in Amazon India??",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -45,6 +49,7 @@
   },
   {
     "id": "eval_gold_005",
+    "conversation_id": "b582ea79678c0d88f91e3702005f9bc7",
     "customer_query": "Still no delivery date to the item I pre-ordered, that came out yesterday \ud83d\ude14 Really unimpressed.",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -56,6 +61,7 @@
   },
   {
     "id": "eval_gold_006",
+    "conversation_id": "a3b9b9676226bb916aa9a47443285999",
     "customer_query": "Please can you tell me why you put this tiny product in a package the size of a wardrobe. #pointlesspackaging #excessivepackaging",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -67,6 +73,7 @@
   },
   {
     "id": "eval_gold_007",
+    "conversation_id": "05775ed5cc40d5ec4027ca1f834f7220",
     "customer_query": "really need update on this,no tracking details and also seller not contactng me",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -78,6 +85,7 @@
   },
   {
     "id": "eval_gold_008",
+    "conversation_id": "457dbc316f16a2f8478661d6d64a26ac",
     "customer_query": "Thank you, , for existing. Despite some logistical frustrations, I am so lucky to have access to your services.",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -89,6 +97,7 @@
   },
   {
     "id": "eval_gold_009",
+    "conversation_id": "482914ce8e39dafbf608885a3e393e03",
     "customer_query": "tracking my package it says it arrived, has been scanned but now it says it is out of stock? how can that be the case?",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -100,6 +109,7 @@
   },
   {
     "id": "eval_gold_010",
+    "conversation_id": "f4b455c2556bf1c6eeba8ae6563210fb",
     "customer_query": "Refund not received for an order placed on 22nd September and cancelled.",
     "true_coarse_intent": "payments_refunds",
     "true_sub_intent": "refund_status_delay",
@@ -111,6 +121,7 @@
   },
   {
     "id": "eval_gold_011",
+    "conversation_id": "791ed25405a6a198f0541fb35148057b",
     "customer_query": "wrong parcel came been told to reorder but now it's doubled in price. I have screenshots of what I ordered and received HELP",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -122,6 +133,7 @@
   },
   {
     "id": "eval_gold_012",
+    "conversation_id": "5703de3548ff252d497ed77119eccccf",
     "customer_query": "hello, i am having trouble getting in contact with someone about an issue with a return due to an amazon locker, please help!",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -133,6 +145,7 @@
   },
   {
     "id": "eval_gold_013",
+    "conversation_id": "105aeb2d3740dbe54c8e1ad9873ba3a2",
     "customer_query": "my prime order is late and has been marked as \u201cout for delivery\u201d for over 48 hours?",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -144,6 +157,7 @@
   },
   {
     "id": "eval_gold_014",
+    "conversation_id": "d0b5cb871f9ce4faeb1e671a46698b3c",
     "customer_query": "Great welcome by Amazon to its Prime Member.\ud83d\ude21\ud83d\ude21\ud83d\ude21",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -155,6 +169,7 @@
   },
   {
     "id": "eval_gold_015",
+    "conversation_id": "c276f72e1afcb8e69a84b7d181c47922",
     "customer_query": "Amazon and Apple hit by EU tax crackdown",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -166,6 +181,7 @@
   },
   {
     "id": "eval_gold_016",
+    "conversation_id": "359f3a586b78c6e3e631f9034ad9166d",
     "customer_query": "My shipment is supposed to arrive yesterday 3 Oct and I do not know why the delay was so much damaged by the delay of the shipment.",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "damaged_or_missing_items",
@@ -177,6 +193,7 @@
   },
   {
     "id": "eval_gold_017",
+    "conversation_id": "301177f5a6d749487c3804830662d488",
     "customer_query": "Still not got this ...",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -188,6 +205,7 @@
   },
   {
     "id": "eval_gold_018",
+    "conversation_id": "b5926cf75e11bc1267300883031b5c72",
     "customer_query": "I can't log into my account, it's telling me that amazon cannot find an account with my email",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -199,6 +217,7 @@
   },
   {
     "id": "eval_gold_019",
+    "conversation_id": "a292756915754f67fe0229b0ce6495e7",
     "customer_query": "automated chat says it will ship October 9th, yet your site indicates you\u2019ll email me when you can estimate a delivery",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -210,6 +229,7 @@
   },
   {
     "id": "eval_gold_020",
+    "conversation_id": "85dc4b985c0550b1f202694c615c42d2",
     "customer_query": "My Account had it's email change without me requesting it, please help",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -221,6 +241,7 @@
   },
   {
     "id": "eval_gold_021",
+    "conversation_id": "5bdae15f716c49d420218bf0098fea10",
     "customer_query": "1.AS PER YOUR INSTRUCTIONS I HAVE FORWARDED THE MAIL TO THE THIRD PARTY SUPPLIER.",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -232,6 +253,7 @@
   },
   {
     "id": "eval_gold_022",
+    "conversation_id": "d9d9f23ff7a979d7ef102877140aacb7",
     "customer_query": "This is the same order that said 'Order now for delivery on the 4th!' listed under 'Prime' ... Arriving Saturday 7th now.",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -243,6 +265,7 @@
   },
   {
     "id": "eval_gold_023",
+    "conversation_id": "92abca4b86000ad423d9805ce64302b4",
     "customer_query": "Dear amazon my item has been delivered to somewhere else, instead of delivering it to me. No response. #HateAmazon #BadService",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -254,6 +277,7 @@
   },
   {
     "id": "eval_gold_024",
+    "conversation_id": "2821f724e427ba8387d3c7eade98b588",
     "customer_query": "The guestlist for tickets may be closed, but we have a surprise opportunity.",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -265,6 +289,7 @@
   },
   {
     "id": "eval_gold_025",
+    "conversation_id": "de1ebebcc9e6982568f0577e0a1286c1",
     "customer_query": "#KaroMilkeTayyari to explore. Get fabulous deals on luggage and backpacks at the #AmazonGreatIndianFestival",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -276,6 +301,7 @@
   },
   {
     "id": "eval_gold_026",
+    "conversation_id": "70a42c0391a14a83bf6011949979d147",
     "customer_query": "need help. How do I project the video onto my TV? The player doesn't support chromecast. My TV, VU, can't download your app.",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -287,6 +313,7 @@
   },
   {
     "id": "eval_gold_027",
+    "conversation_id": "b22b9ae6badfde081fda750a43fb7f8f",
     "customer_query": "never expected a bullying & crooked behaviour from Amazon. I requested a return of defective iPhone SE, no one from Amazon..contd#",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -298,6 +325,7 @@
   },
   {
     "id": "eval_gold_028",
+    "conversation_id": "e002053e617cb421a0e25a2908e89ccc",
     "customer_query": "Amazon is doing so many frauds. i oredered iphone7and what is receved is a box with charger and earphone so be carefull@amazonIN",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -309,6 +337,7 @@
   },
   {
     "id": "eval_gold_029",
+    "conversation_id": "f04ec8a32b8bd49d5a5b920258f05a8f",
     "customer_query": "greetings from . we wanted to be associated for Merchant onboarding for you. Plz guide or suggest ..",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -320,6 +349,7 @@
   },
   {
     "id": "eval_gold_030",
+    "conversation_id": "1ad9e9e936ec937ec6d3a5d8e467a449",
     "customer_query": "#GreatIndianFestival is nothing but #Ullubanaving sale.iPhone 6price shows 20000 but just can not add this item to cart(see time)",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -331,6 +361,7 @@
   },
   {
     "id": "eval_gold_031",
+    "conversation_id": "846259cd902b5c40bafeb3c7cb058f07",
     "customer_query": "greetings from . we wanted to be associated for Merchant onboarding for you. Plz guide or suggest",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -342,6 +373,7 @@
   },
   {
     "id": "eval_gold_032",
+    "conversation_id": "31bf329ba2bedf68ee7fef48fc5aded6",
     "customer_query": "you guys were supposed to remind me when my membership was due but I didn't get any email therefore was charged",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -353,6 +385,7 @@
   },
   {
     "id": "eval_gold_033",
+    "conversation_id": "fe0bd5f9905e0a787531b711a800c9c1",
     "customer_query": "I've pre-ordered Star Wars Battlefront 2 but haven't received a code for early access to the beta. Please help.",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -364,6 +397,7 @@
   },
   {
     "id": "eval_gold_034",
+    "conversation_id": "5c857fa8d4c9bf9f7b9c9be169445a7f",
     "customer_query": "dear amazon the mobile price of redmi 4 is 10999 and u gave 14% discount then it should be -1539.86 Then 10999-1540 =9460",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -375,6 +409,7 @@
   },
   {
     "id": "eval_gold_035",
+    "conversation_id": "9164683913d2ba12f853445017167fed",
     "customer_query": "not a good service provide by Amazon and delivery is very poor",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -386,6 +421,7 @@
   },
   {
     "id": "eval_gold_036",
+    "conversation_id": "163fa8f2f40489d91f6720cf0f843f19",
     "customer_query": "doesn't let me change the audio of the movies i'm watching now i'm forced to watch it in english, fix it ??",
     "true_coarse_intent": "product_digital",
     "true_sub_intent": "digital_content_kindle_video",
@@ -397,6 +433,7 @@
   },
   {
     "id": "eval_gold_037",
+    "conversation_id": "8f9bebfcb0fbf057766706763102094e",
     "customer_query": "Hello! Can you please put me in touch with someone from customer care? This is regarding an order I placed.",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -408,6 +445,7 @@
   },
   {
     "id": "eval_gold_038",
+    "conversation_id": "55cc25dcd22cafb93ec1240f75f5109c",
     "customer_query": "I wish to exchange my working Dell laptop for new one.But one of the hinges of screen is broken. Is it eligible for exchange?",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "damaged_or_missing_items",
@@ -419,6 +457,7 @@
   },
   {
     "id": "eval_gold_039",
+    "conversation_id": "080aa506126cf3158e540ebdee3755ff",
     "customer_query": "has released the trailer for #RedOaks season 3. Bummer it\u2019ll be the last season. 1 of the best shows around. So funny!",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -430,6 +469,7 @@
   },
   {
     "id": "eval_gold_040",
+    "conversation_id": "1fd5712f8d94c8dd27ade292d1c342e2",
     "customer_query": "hi i preordered star wars battle front II and you sent an email with beta code but its not working",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -441,6 +481,7 @@
   },
   {
     "id": "eval_gold_041",
+    "conversation_id": "05193d24b46dffb0a5ba520797aa665c",
     "customer_query": "been charged for prime wrongly and can\u2019t find how to request a refund... can you help? Thanks",
     "true_coarse_intent": "payments_refunds",
     "true_sub_intent": "refund_status_delay",
@@ -452,6 +493,7 @@
   },
   {
     "id": "eval_gold_042",
+    "conversation_id": "582cdc3192a66a78aad04bbe6f1d6a6d",
     "customer_query": "I tried to come as seller but not able to board the platform need a professional to assist me to get approval of category etc.",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -463,6 +505,7 @@
   },
   {
     "id": "eval_gold_043",
+    "conversation_id": "60a6a2bbb35f181c7968046d304e2ef4",
     "customer_query": "Hey I received refund for last amazon prime but now see that the past two months have been charged..I am still being charged",
     "true_coarse_intent": "payments_refunds",
     "true_sub_intent": "refund_status_delay",
@@ -474,6 +517,7 @@
   },
   {
     "id": "eval_gold_044",
+    "conversation_id": "baa6e73506e75ce3e6bd862e4069cfb8",
     "customer_query": "hi I\u2019ve ordered qualifying products so I could receive the baby box but I\u2019m not getting the option to claim the box.",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -485,6 +529,7 @@
   },
   {
     "id": "eval_gold_045",
+    "conversation_id": "40cd5ffb117b247e5a2863fa1581fd3e",
     "customer_query": "I paid for mobile12 day back,to be dely by 26thwasted lot of time with cust service,2day back amazon claims delivered without dely",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -496,6 +541,7 @@
   },
   {
     "id": "eval_gold_046",
+    "conversation_id": "c052f1a8be4fb7985428171e4a41dde5",
     "customer_query": "Not satisfied with the CX experience. The price is now available at cheaper price and you're not refunding the difference amount.",
     "true_coarse_intent": "payments_refunds",
     "true_sub_intent": "refund_status_delay",
@@ -507,6 +553,7 @@
   },
   {
     "id": "eval_gold_047",
+    "conversation_id": "5f5ea19bafc243ac875784f47e2a9e08",
     "customer_query": "Damn what\u2019s the point in preordering a book if I\u2019m not gonna get it until a week after release?!",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -518,6 +565,7 @@
   },
   {
     "id": "eval_gold_048",
+    "conversation_id": "24894af68701a017607305f6d14d63d0",
     "customer_query": "ARRIVING: An iPhone I never ordered! is it a #DiwaliGift for being a loyal customer? I am happy if it is...",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -529,6 +577,7 @@
   },
   {
     "id": "eval_gold_049",
+    "conversation_id": "b3e60b4c2da8ed6a1e1f2bc7a41f677d",
     "customer_query": "I pre ordered Star Was Battlefront II on XB1 and supposed to get beta code. Does this come from you or am I missing something?",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -540,6 +589,7 @@
   },
   {
     "id": "eval_gold_050",
+    "conversation_id": "3ca9a57dcdd473e70727592978a39e63",
     "customer_query": "WHY when only asking about my order #SNESCLASSIC did customer service proceed to cancel the first order I used employee discount on.",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -551,6 +601,7 @@
   },
   {
     "id": "eval_gold_051",
+    "conversation_id": "01574045a48cb3bd3d762e3e6014e522",
     "customer_query": "I'm concerned about transactions happening in my bank account from you guys. It's there a 24hr # I can call",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -562,6 +613,7 @@
   },
   {
     "id": "eval_gold_052",
+    "conversation_id": "5dd2df14c41b7a1408cedb816bed73ba",
     "customer_query": "@XboxSupport - can one of you assist me with the BETA issue for star wars!! your all blaming each other",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -573,6 +625,7 @@
   },
   {
     "id": "eval_gold_053",
+    "conversation_id": "82f927d9597ec19d91021416e9014aa9",
     "customer_query": "Still havent recieved my parcel. Could you track where abouts this is please. The tracking number is A10040684583",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -584,6 +637,7 @@
   },
   {
     "id": "eval_gold_054",
+    "conversation_id": "5c682bf9f67b1707150b629e850e0fe4",
     "customer_query": "I placd an order iPhone se 32 Gb variant with net banking and my acc blocked for security reason!My Order ID 404-6662997-2205169",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -595,6 +649,7 @@
   },
   {
     "id": "eval_gold_055",
+    "conversation_id": "3479fe8abeaceb756ffc71800f736379",
     "customer_query": "I have some Issues with my amazon account help me our please",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -606,6 +661,7 @@
   },
   {
     "id": "eval_gold_056",
+    "conversation_id": "2aa717de91261add4e665011fbe22aa9",
     "customer_query": "Hey . There was no bookmark with the recent two books I got.It would be nice if you could send some with the more books I ordered.",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -617,6 +673,7 @@
   },
   {
     "id": "eval_gold_057",
+    "conversation_id": "758e02aca92b85e09b0d0219742f418a",
     "customer_query": "your socail media team is useless, have never helped. Only forward a link to call you support. Why is it called A help",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -628,6 +685,7 @@
   },
   {
     "id": "eval_gold_058",
+    "conversation_id": "4d6a71f6b3fc8f6cfd576969c48073fd",
     "customer_query": "The apathy exhibited by 's customer service is not just deplorable but warrants retribution.",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -639,6 +697,7 @@
   },
   {
     "id": "eval_gold_059",
+    "conversation_id": "cb0cc8dbf660a3d3f2abe84d527bfe3f",
     "customer_query": "Had to cancel my order today from 2 day shipping item still not shipped, horrible experience with the CSR.",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -650,6 +709,7 @@
   },
   {
     "id": "eval_gold_060",
+    "conversation_id": "e4f9f1a6a6193f7100fc69a9abe3fc27",
     "customer_query": "Broken product received for order 408-7624111-6539547 Looking for replacement, cu care was unable to register replace. Do check",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "damaged_or_missing_items",
@@ -661,6 +721,7 @@
   },
   {
     "id": "eval_gold_061",
+    "conversation_id": "322ebbbab0e120a92bcc8512a4271516",
     "customer_query": "why the fuck is it so had to deactivate an Amazon account down. 10 times of got the same fucking mail saying the same shit",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -672,6 +733,7 @@
   },
   {
     "id": "eval_gold_062",
+    "conversation_id": "3c57cfef5bae8045c3d3b1dd2e970fe8",
     "customer_query": "Amazon means false commitment and cheating customers.kindly help me by publishing in news.",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -683,6 +745,7 @@
   },
   {
     "id": "eval_gold_063",
+    "conversation_id": "48d90038f7bbc040bd382020f93c4ff3",
     "customer_query": "my kindle is not working and I find no Amazon service center in Hyderabad. Need help :(",
     "true_coarse_intent": "product_digital",
     "true_sub_intent": "digital_content_kindle_video",
@@ -694,6 +757,7 @@
   },
   {
     "id": "eval_gold_064",
+    "conversation_id": "c780abb29c7cc12ed143db7e9dec21e9",
     "customer_query": "Pickup Tracking ID 69956471561, no response from your agents for the return ??",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -705,6 +769,7 @@
   },
   {
     "id": "eval_gold_065",
+    "conversation_id": "b730b526034c473b22ccf2aa221188e6",
     "customer_query": "this is probably not a good place to leave my packages at a condo...right inside the gate?",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -716,6 +781,7 @@
   },
   {
     "id": "eval_gold_066",
+    "conversation_id": "a9e3b95e8ae40fee7407bcbc458f3770",
     "customer_query": "Hello When I ordered a loafer, then a formal shoe came to me. But still in waiting for return &refund.",
     "true_coarse_intent": "payments_refunds",
     "true_sub_intent": "refund_status_delay",
@@ -727,6 +793,7 @@
   },
   {
     "id": "eval_gold_067",
+    "conversation_id": "f04845afe7039f4c6da12a5721463762",
     "customer_query": "hey can you check DMs",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -738,6 +805,7 @@
   },
   {
     "id": "eval_gold_068",
+    "conversation_id": "d20afc4f6c928eb5c1810af46a35fd1f",
     "customer_query": "Hey I've been waiting for you to collect my return for days now and I can't find a way to contact anyone about it! Help!?",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -749,6 +817,7 @@
   },
   {
     "id": "eval_gold_069",
+    "conversation_id": "00ee11b848fc5a9e8af19d47b6b2ba0d",
     "customer_query": "I am not the BETA Token bae I perceived I was?",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -760,6 +829,7 @@
   },
   {
     "id": "eval_gold_070",
+    "conversation_id": "952f91900be4072d9f8dd1551d91efa5",
     "customer_query": "Okay , where did you hide tracking numbers? Why do they show up on the app but not the web page? Is this an \"improvement?\" #ItsNot",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -771,6 +841,7 @@
   },
   {
     "id": "eval_gold_071",
+    "conversation_id": "0cdb65413cacf2597c360a6fa037ef01",
     "customer_query": "hi , can you please help with order no 114-6790525-1580205! it was placed on 9/30 but hasn't shipped as of yet!",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -782,6 +853,7 @@
   },
   {
     "id": "eval_gold_072",
+    "conversation_id": "7da002509b62120adf129cc84ef740a9",
     "customer_query": "I'm facing issue linking my kindle edition to print version. In spite of many emails, it's not getting resolved. What can I do?",
     "true_coarse_intent": "product_digital",
     "true_sub_intent": "digital_content_kindle_video",
@@ -793,6 +865,7 @@
   },
   {
     "id": "eval_gold_073",
+    "conversation_id": "6aa9bd14b2edcac06a1e703e66e76017",
     "customer_query": "hello my kindle is dying. I full charge it and in a few minutes the battery begins to drawn. It won\u2019t last. What can I do?",
     "true_coarse_intent": "product_digital",
     "true_sub_intent": "digital_content_kindle_video",
@@ -804,6 +877,7 @@
   },
   {
     "id": "eval_gold_074",
+    "conversation_id": "ac3ee6c2593d11e511d4ecf1c0104230",
     "customer_query": "Would be great if when you ordered a book from it didn't come looking like it's been completely battered",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -815,6 +889,7 @@
   },
   {
     "id": "eval_gold_075",
+    "conversation_id": "ea4058500674c1182ab8eebf778198f1",
     "customer_query": "sir i order samsung j7 prime rs 10'500 in amazon pay how many cash back i get?",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -826,6 +901,7 @@
   },
   {
     "id": "eval_gold_076",
+    "conversation_id": "13154dc363019a7ea7cdf791f89909c1",
     "customer_query": "Goofup with product delivery to wrong address Order#408-6362281-0698719. Support have done nothing, despite two escalations. \ud83d\ude1f\ud83d\ude14\ud83d\ude15",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -837,6 +913,7 @@
   },
   {
     "id": "eval_gold_077",
+    "conversation_id": "b553b37d4288b8e9ba1da24d19bba6a7",
     "customer_query": "I got my redme 4 today. But I'm not satisfied with the product so I want to return d same. Kindly assist Order 408-1160678-3266756",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -848,6 +925,7 @@
   },
   {
     "id": "eval_gold_078",
+    "conversation_id": "2db016c3e9292a037c19eb27675074a2",
     "customer_query": "Customer care is not responding to my request & I am not able to return my Redme 4 cellph. Amazon acnt Registered no: 8856816009",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -859,6 +937,7 @@
   },
   {
     "id": "eval_gold_079",
+    "conversation_id": "5efae0e101b4cd69f60057c3ac7e81d7",
     "customer_query": "Hi I pay for 2-day delivery for a reason. And the reason isn't that agent can call me and tell me he'll deliver on the 3rd day.",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -870,6 +949,7 @@
   },
   {
     "id": "eval_gold_080",
+    "conversation_id": "4debac5dcf36b3fcec70beef60fc2d7b",
     "customer_query": "I am located in Florida. How on earth is this acceptable for a 1-day shipping order? This has happened TWICE in a row both 1 day shipping. 2 weeks to get 2 orders with 1 day shipping is ridiculous..",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -881,6 +961,7 @@
   },
   {
     "id": "eval_gold_081",
+    "conversation_id": "65333c1e4b4500c17cd107edce8a5cf9",
     "customer_query": "Dear wish to know about my refund status , Your DA came and collected the package but status shows as return requested",
     "true_coarse_intent": "payments_refunds",
     "true_sub_intent": "refund_status_delay",
@@ -892,6 +973,7 @@
   },
   {
     "id": "eval_gold_082",
+    "conversation_id": "daf67ee2be3d31563a6bf3e421448f76",
     "customer_query": "My order says delivered but hasn\u2019t arrived. How do I get a refund?",
     "true_coarse_intent": "payments_refunds",
     "true_sub_intent": "refund_status_delay",
@@ -903,6 +985,7 @@
   },
   {
     "id": "eval_gold_083",
+    "conversation_id": "9048596262825498b809a407d14fd241",
     "customer_query": "Ordered my vape over a week ago and hasn't arrived yet \ud83d\ude42\ud83d\ude42\ud83d\ude42 It was meant to be delivered last Thursday.",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -914,6 +997,7 @@
   },
   {
     "id": "eval_gold_084",
+    "conversation_id": "bd2d8dc71d62ef4037dda192f8621ba3",
     "customer_query": "hey can you help to deliver my package today, which is schedule to reach tom.. In urgent need of that package",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -925,6 +1009,7 @@
   },
   {
     "id": "eval_gold_085",
+    "conversation_id": "4296b07b993d1fd3d57c644a5e1fbe36",
     "customer_query": "Sir, two items hd ordered mistakely. Then i cancelled this order. But i caouldn't get refund rs 229 which was debited from my ac",
     "true_coarse_intent": "payments_refunds",
     "true_sub_intent": "refund_status_delay",
@@ -936,6 +1021,7 @@
   },
   {
     "id": "eval_gold_086",
+    "conversation_id": "362a731e051e058d5196f29e7d0a5987",
     "customer_query": "I'd like to thank you for the swift refund for my order that never arrived. Such quick actions engender great loyalty",
     "true_coarse_intent": "payments_refunds",
     "true_sub_intent": "refund_status_delay",
@@ -947,6 +1033,7 @@
   },
   {
     "id": "eval_gold_087",
+    "conversation_id": "8624a4479eec6ca817f7aa7ba80989bf",
     "customer_query": "Amazon Echo with Alexa. It\u2019s here. #AskAlexa",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -958,6 +1045,7 @@
   },
   {
     "id": "eval_gold_088",
+    "conversation_id": "785edec6241305b0ae61ce447d7ccd1f",
     "customer_query": "Gran's order has been cancelled twice. It's limited item, but keep explaining I bought three on my account & 3 on her new account.",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -969,6 +1057,7 @@
   },
   {
     "id": "eval_gold_089",
+    "conversation_id": "8bb6023cf5bbc8fce7e65c1932729626",
     "customer_query": "the inability to get a straight answer from your support team dumbfounds me. Constant lies & half truths #COMPLAINT #pissedoff",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -980,6 +1069,7 @@
   },
   {
     "id": "eval_gold_090",
+    "conversation_id": "cccf5cb28467b9ca9359fd013986f356",
     "customer_query": "i ordered battlefront 2 off your website and still havent received my beta code after 3 customer service staff said i would by now",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -991,6 +1081,7 @@
   },
   {
     "id": "eval_gold_091",
+    "conversation_id": "9fbf12afac1aca917fac37c9cc0278ab",
     "customer_query": "please advise of your complaints process. Your agents on chat and phone refuse to log a complaint.",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1002,6 +1093,7 @@
   },
   {
     "id": "eval_gold_092",
+    "conversation_id": "06b4c657e519fcb66765955b31eaff83",
     "customer_query": "why do u feel it's ok to leave parcels on the door step like this.shambles",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1013,6 +1105,7 @@
   },
   {
     "id": "eval_gold_093",
+    "conversation_id": "f3c0a118837504419502f5b823ab7c34",
     "customer_query": "very irresponsible ORDER #405-9317605-5910754, ORDER # 405-9317605-5910754 Current Status of Investigation ?",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1024,6 +1117,7 @@
   },
   {
     "id": "eval_gold_094",
+    "conversation_id": "cffb11d714e688ef03a2a9ac50593948",
     "customer_query": "My query is not resolved",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1035,6 +1129,7 @@
   },
   {
     "id": "eval_gold_095",
+    "conversation_id": "b375c0955ae84c9446361d42afa65b5d",
     "customer_query": "hi, I have a major query but before that a question. Does Amazon care for customers?",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1046,6 +1141,7 @@
   },
   {
     "id": "eval_gold_096",
+    "conversation_id": "d3617d36d26d3087c35e9ad68645a0dc",
     "customer_query": "Can you please explain why my truthful & factual review of the product I received from your company cannot be posted?",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1057,6 +1153,7 @@
   },
   {
     "id": "eval_gold_097",
+    "conversation_id": "12c06aa15a48f52c6e3c4a00450ad527",
     "customer_query": "are offering this delivery boy jobs? Please explain.",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1068,6 +1165,7 @@
   },
   {
     "id": "eval_gold_098",
+    "conversation_id": "ebb547c11accf1b2c671d79fabfabc94",
     "customer_query": "I own an Echo Dot 2. I'm unable to find a play store link to download the app to configure my device. Help?",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1079,6 +1177,7 @@
   },
   {
     "id": "eval_gold_099",
+    "conversation_id": "ae9d885b9bf127adb37b587255f2ad8e",
     "customer_query": "Denial of Service and Late delivery by #Amazon, complaint filed against",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1090,6 +1189,7 @@
   },
   {
     "id": "eval_gold_100",
+    "conversation_id": "d009d0a2a8d21eddb537f99276a33eb2",
     "customer_query": "I need to return 2 items and have had to get separate return barcodes. Can I send them back together?They were sent in 1 package",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1101,6 +1201,7 @@
   },
   {
     "id": "eval_gold_101",
+    "conversation_id": "796c643febc8540de39a3f2dde14c5dc",
     "customer_query": "just gone to use Amazon prime and won't deliver until Friday 6th October?",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1112,6 +1213,7 @@
   },
   {
     "id": "eval_gold_102",
+    "conversation_id": "47e48d89bb325d7920717e83f5623db1",
     "customer_query": "Not only was my account hacked for a third time, but their customer service had the nerve to be extremely rude to me about it.",
     "true_coarse_intent": "account_access",
     "true_sub_intent": "compromised_account_hijack",
@@ -1123,6 +1225,7 @@
   },
   {
     "id": "eval_gold_103",
+    "conversation_id": "b5de6c8469a5b3356f0b0c9a194663fc",
     "customer_query": "my phone's finger print scanner is not working. Also the technician was supposed to arrive in the afternoon but still not here!",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1134,6 +1237,7 @@
   },
   {
     "id": "eval_gold_104",
+    "conversation_id": "6591f3101e6407de07093fc8bdf72cc1",
     "customer_query": "Dear Amazon team,fade up with your late delivery service.order was placed on 24sep2017 and today is 04.10.2017 but i am yet to receive that.",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1145,6 +1249,7 @@
   },
   {
     "id": "eval_gold_105",
+    "conversation_id": "d77d9eff4ad4bf2471174a46137a4e8f",
     "customer_query": "Hi there, a CD I ordered recently has a large crack on the front of it. I was wondering how it can be replaced; not refunded.",
     "true_coarse_intent": "payments_refunds",
     "true_sub_intent": "refund_status_delay",
@@ -1156,6 +1261,7 @@
   },
   {
     "id": "eval_gold_106",
+    "conversation_id": "fcd495785ed209fc72c1182bee3c89b7",
     "customer_query": "your delivery drivers really need training. Stack them up in front of the door \ud83d\udc4d\ud83c\udffd",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1167,6 +1273,7 @@
   },
   {
     "id": "eval_gold_107",
+    "conversation_id": "842aadc70b10a19a8d8b282297eaf2fd",
     "customer_query": "Lulz. I haven't received my parcel yet and are sending someone to collect it from me tomorrow.",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1178,6 +1285,7 @@
   },
   {
     "id": "eval_gold_108",
+    "conversation_id": "a9ca1dceb7bd1f3ebbc433e2623a4e17",
     "customer_query": "Hi, I cancelled an order yesterday I have got an email stating that also but I was wondering when I\u2019ll be refunded?",
     "true_coarse_intent": "payments_refunds",
     "true_sub_intent": "refund_status_delay",
@@ -1189,6 +1297,7 @@
   },
   {
     "id": "eval_gold_109",
+    "conversation_id": "a695b421dccc0cf1e12d43714bbd9941",
     "customer_query": "I didn't get my Voucher details and customer care is playing with me by giving different statements. Worst service.",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1200,6 +1309,7 @@
   },
   {
     "id": "eval_gold_110",
+    "conversation_id": "c894ecec5faa7adfa56ddeb74907390d",
     "customer_query": "trying to log in on the app & on the normal website and keep getting this and a random email address keeps coming up on the app?",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1211,6 +1321,7 @@
   },
   {
     "id": "eval_gold_111",
+    "conversation_id": "cfd0316557bf8e5541955f0ef3017dc4",
     "customer_query": "hi I've gone to use prime and can't get delivered until Friday. All items are prime",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1222,6 +1333,7 @@
   },
   {
     "id": "eval_gold_112",
+    "conversation_id": "ef2cc74ec7690310385b267c33209b42",
     "customer_query": "Wrongly delivered. Please deliver it to correct id",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1233,6 +1345,7 @@
   },
   {
     "id": "eval_gold_113",
+    "conversation_id": "cba0f5690ce31092f2840ca98af05ef7",
     "customer_query": "Need help with my order, purchased last Thursday and it has said \u201cshipping soon\u201d for about 4 days now.",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1244,6 +1357,7 @@
   },
   {
     "id": "eval_gold_114",
+    "conversation_id": "a697e2b5e963202b22dada4475e5cfad",
     "customer_query": "Anyone working at who can help me with a store merchant issue? Having a 4-month long nightmare trying to get my account unlocked.",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1255,6 +1369,7 @@
   },
   {
     "id": "eval_gold_115",
+    "conversation_id": "71bf3bbb6bbe3dcb16104bb1dd82714f",
     "customer_query": "I bought the Ronaldo edition of fifa 18 but i haven't recieved my weekly pack that comes with it. Please help.",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1266,6 +1381,7 @@
   },
   {
     "id": "eval_gold_116",
+    "conversation_id": "93628d61e269f816a635d4870183457b",
     "customer_query": "Order id 408-9284363-8106739.Amazon cheat and dont refund my money.",
     "true_coarse_intent": "payments_refunds",
     "true_sub_intent": "refund_status_delay",
@@ -1277,6 +1393,7 @@
   },
   {
     "id": "eval_gold_117",
+    "conversation_id": "d6b84857a4ff5e7cd9b0c81e01e0c934",
     "customer_query": "I am unable to pay for my order id :- 405-2765780-7605958 and 2 more.Your team suggested to cancel the order. What should I do ?",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1288,6 +1405,7 @@
   },
   {
     "id": "eval_gold_118",
+    "conversation_id": "1f24bb1726c0e7405a640243703f0a74",
     "customer_query": "thanks to your customer service adviser Roshain really helpful and great manor on the phone",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1299,6 +1417,7 @@
   },
   {
     "id": "eval_gold_119",
+    "conversation_id": "149ad00ed10408742b8cefc3901d765b",
     "customer_query": "None of my birthday packages that I ordered for myself came...not Prime and not ....I'm bummed AF and my Birthday is tomorrow",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1310,6 +1429,7 @@
   },
   {
     "id": "eval_gold_120",
+    "conversation_id": "a53b5fd0fed2338d42f299f6c3b651d6",
     "customer_query": "I ordered this book Z38194916, Curse of yesterday, in Sep. It hasn't been delivered yet. Frustrated by your service.",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1321,6 +1441,7 @@
   },
   {
     "id": "eval_gold_121",
+    "conversation_id": "b47e02d6d7fc2bd3e8cdb2316550c82a",
     "customer_query": "placed 2 orders separately yesterday, at separate times, paid postage on both but you put them in the same \ud83d\udce6, can I get a refund?",
     "true_coarse_intent": "payments_refunds",
     "true_sub_intent": "refund_status_delay",
@@ -1332,6 +1453,7 @@
   },
   {
     "id": "eval_gold_122",
+    "conversation_id": "5921b4734bc21200299c4ecd359bd0ba",
     "customer_query": "Guys don't buy smart phones from Amazon if you buy you will be suffering like me here is the email screenshot attached",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1343,6 +1465,7 @@
   },
   {
     "id": "eval_gold_123",
+    "conversation_id": "37601463c593d212260e8bd90d6500ff",
     "customer_query": ": Just look at the tone taken by your executives who don't understand that if I'm buying something worth 60k, I need to be assured of the installation/demo. : I still don't have an answer!",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1354,6 +1477,7 @@
   },
   {
     "id": "eval_gold_124",
+    "conversation_id": "43d3b112509950aacc6e48f87baf788a",
     "customer_query": "still I have not received my product n I received a mail from there end tha the address is incompletely (1/2)",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1365,6 +1489,7 @@
   },
   {
     "id": "eval_gold_125",
+    "conversation_id": "9c1431d420e0298b9d8ff7ad7d59b09d",
     "customer_query": "I change my password three times in a row, and i tried to login, but still it says your password is incorrect",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1376,6 +1501,7 @@
   },
   {
     "id": "eval_gold_126",
+    "conversation_id": "6a9008559ff8ec1007bfb9114e244e49",
     "customer_query": "So, the first picture is what I actually ordered from Amazon. The second picture is what got delivered \ud83d\ude29\ud83d\ude02\ud83e\udd14",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1387,6 +1513,7 @@
   },
   {
     "id": "eval_gold_127",
+    "conversation_id": "6ac063fc839f99fcf4c6be025b3291b8",
     "customer_query": "you should change the name of your sale from #AmazonGreatIndianFestival to #AmazonLateDeliveryFestival. Order delayed by 8 days.",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1398,6 +1525,7 @@
   },
   {
     "id": "eval_gold_128",
+    "conversation_id": "aeb2fb7f71042b3f42eb6f30914d5808",
     "customer_query": "Amazon Echo launched in India. By invitation only - whatever it means.",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1409,6 +1537,7 @@
   },
   {
     "id": "eval_gold_129",
+    "conversation_id": "7370aafc4fc8b7cb0a092a98fecc2a66",
     "customer_query": "Boom! At last... thanks for the assistance",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1420,6 +1549,7 @@
   },
   {
     "id": "eval_gold_130",
+    "conversation_id": "ee222d293d2c29ccbc9c13b1ee588f78",
     "customer_query": "would I be able to buy Kindle e books using a Canadian card from Canada? It's a gift for someone ?",
     "true_coarse_intent": "product_digital",
     "true_sub_intent": "digital_content_kindle_video",
@@ -1431,6 +1561,7 @@
   },
   {
     "id": "eval_gold_131",
+    "conversation_id": "86f8da62223e294df2817d77f68a0135",
     "customer_query": "why am i still waiting for my \u201cnext day delivery\u201d amazon...",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1442,6 +1573,7 @@
   },
   {
     "id": "eval_gold_132",
+    "conversation_id": "8f89edd439b19e728e2a723b54d3f46c",
     "customer_query": "thank you to for getting me my money back after ordering an Xbox and it turned out to be some dodgy seller!!",
     "true_coarse_intent": "payments_refunds",
     "true_sub_intent": "refund_status_delay",
@@ -1453,6 +1585,7 @@
   },
   {
     "id": "eval_gold_133",
+    "conversation_id": "e11c2b1ed577b02f87d9f298c7c0a1de",
     "customer_query": "Delivery date changed to 19th October! What is going on !? #justiceforLB",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1464,6 +1597,7 @@
   },
   {
     "id": "eval_gold_134",
+    "conversation_id": "837bb77ff56787f4bc0b8412f0f74066",
     "customer_query": "please let me know what to make of this. Thanks.",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1475,6 +1609,7 @@
   },
   {
     "id": "eval_gold_135",
+    "conversation_id": "f0e0b72724756a1053e74efbadcb2c3f",
     "customer_query": "Ive been waiting for my TV for a month! None of your Cst svc members could help and wanted me to pay more to get it fm anti vndr",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1486,6 +1621,7 @@
   },
   {
     "id": "eval_gold_136",
+    "conversation_id": "211406ba0b214b5b2acf57d0824a9257",
     "customer_query": "pathetic service.full flop show.a basic thing like invoice of a product is not available on your app.learn from . M suffrng",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1497,6 +1633,7 @@
   },
   {
     "id": "eval_gold_137",
+    "conversation_id": "8806adc027a3c5071e0290cb10e606c6",
     "customer_query": "I want my money back from Amazon pay .please help",
     "true_coarse_intent": "payments_refunds",
     "true_sub_intent": "refund_status_delay",
@@ -1508,6 +1645,7 @@
   },
   {
     "id": "eval_gold_138",
+    "conversation_id": "3a0dd539f6b35425f480056d4ef0d78d",
     "customer_query": "I pre ordered Star Wars battlefront 2 for PS4 through you guys. How do I get into the beta? I need a code?",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1519,6 +1657,7 @@
   },
   {
     "id": "eval_gold_139",
+    "conversation_id": "405379a5de6b3e50084efb32b2fd3488",
     "customer_query": "due 2 delay#406-1742635-6433121 and 9218026-3865152 I will not accept those products. Plz process for payment refund.",
     "true_coarse_intent": "payments_refunds",
     "true_sub_intent": "refund_status_delay",
@@ -1530,6 +1669,7 @@
   },
   {
     "id": "eval_gold_140",
+    "conversation_id": "d9bb41ac1451d78985f541201c26ab1e",
     "customer_query": ". why did you cancel my pre-order of \"art of the larder\" and why did you not bother to send me an email informing me?",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1541,6 +1681,7 @@
   },
   {
     "id": "eval_gold_141",
+    "conversation_id": "56595eef9f023731b735556e4c9a7df0",
     "customer_query": "You are doing fraud by selling amazon prime. U charge but do not provide services. Kindly refund my money.",
     "true_coarse_intent": "payments_refunds",
     "true_sub_intent": "refund_status_delay",
@@ -1552,6 +1693,7 @@
   },
   {
     "id": "eval_gold_142",
+    "conversation_id": "33b8f27fb5b3d619cce81b82119086f0",
     "customer_query": "Preordered #StarWarsBattlefrontII from and I haven\u2019t received my code for the beta",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1563,6 +1705,7 @@
   },
   {
     "id": "eval_gold_143",
+    "conversation_id": "8555a1f2ccbc0de805fa17590599adc1",
     "customer_query": "I was waiting for it forever,finally ty #AmazonIndia.But u can by through only invitation is d idea I don't like #AmazonEcho.I hope 2 get it",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1574,6 +1717,7 @@
   },
   {
     "id": "eval_gold_144",
+    "conversation_id": "55bec21b83d31a6506919b0eedd715bd",
     "customer_query": "since when does charge for returning items that don't work out? i have never had to pay for shipping return items.........",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
@@ -1585,6 +1729,7 @@
   },
   {
     "id": "eval_gold_145",
+    "conversation_id": "01ba109bef1693d1e9e1a18a7453bffe",
     "customer_query": "how do i go ab out making a complaint against you",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",

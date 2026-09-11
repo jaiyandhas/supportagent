@@ -178,14 +178,32 @@ export const App: React.FC = () => {
                   <tr>
                     <td className="py-2 text-[#1D1D1F]">Coarse Intent Accuracy</td>
                     <td className="py-2 text-[#6E6E73]">{evalResults.systems.trivial_baseline.intent_coarse.accuracy.toFixed(3)}</td>
-                    <td className="py-2 text-[#6E6E73]">{evalResults.systems.simple_baseline.intent_coarse.accuracy.toFixed(3)}</td>
-                    <td className="py-2 font-medium text-[#0071E3]">{evalResults.systems.calibrated_trust_first.intent_coarse.accuracy.toFixed(3)}</td>
+                    <td className="py-2 font-medium text-[#1D1D1F]">{evalResults.systems.simple_baseline.intent_coarse.accuracy.toFixed(3)}</td>
+                    <td className="py-2 text-[#6E6E73]">{evalResults.systems.calibrated_trust_first.intent_coarse.accuracy.toFixed(3)}</td>
                   </tr>
                   <tr>
                     <td className="py-2 text-[#1D1D1F]">Coarse Worst-Class F1</td>
                     <td className="py-2 text-[#6E6E73]">{evalResults.systems.trivial_baseline.intent_coarse.worst_class_f1.toFixed(3)}</td>
                     <td className="py-2 text-[#6E6E73]">{evalResults.systems.simple_baseline.intent_coarse.worst_class_f1.toFixed(3)}</td>
-                    <td className="py-2 font-medium text-[#0071E3]">{evalResults.systems.calibrated_trust_first.intent_coarse.worst_class_f1.toFixed(3)}</td>
+                    <td className="py-2 text-[#6E6E73]">{evalResults.systems.calibrated_trust_first.intent_coarse.worst_class_f1.toFixed(3)}</td>
+                  </tr>
+                  <tr>
+                    <td className="py-2 text-[#1D1D1F]">Sub-Intent Macro F1</td>
+                    <td className="py-2 text-[#6E6E73]">{evalResults.systems.trivial_baseline.intent_sub.macro_f1.toFixed(3)}</td>
+                    <td className="py-2 text-[#6E6E73]">{evalResults.systems.simple_baseline.intent_sub.macro_f1.toFixed(3)}</td>
+                    <td className="py-2 font-medium text-[#0071E3]">{evalResults.systems.calibrated_trust_first.intent_sub.macro_f1.toFixed(3)}</td>
+                  </tr>
+                  <tr>
+                    <td className="py-2 text-[#1D1D1F]">Escalation Precision</td>
+                    <td className="py-2 text-[#6E6E73]">{evalResults.systems.trivial_baseline.escalation.precision.toFixed(3)}</td>
+                    <td className="py-2 text-[#6E6E73]">{evalResults.systems.simple_baseline.escalation.precision.toFixed(3)}</td>
+                    <td className="py-2 font-medium text-[#0071E3]">{evalResults.systems.calibrated_trust_first.escalation.precision.toFixed(3)}</td>
+                  </tr>
+                  <tr>
+                    <td className="py-2 text-[#1D1D1F]">Escalation Recall</td>
+                    <td className="py-2 text-[#6E6E73]">{evalResults.systems.trivial_baseline.escalation.recall.toFixed(3)}</td>
+                    <td className="py-2 font-medium text-[#1D1D1F]">{evalResults.systems.simple_baseline.escalation.recall.toFixed(3)}</td>
+                    <td className="py-2 text-[#6E6E73]">{evalResults.systems.calibrated_trust_first.escalation.recall.toFixed(3)}</td>
                   </tr>
                   <tr>
                     <td className="py-2 text-[#1D1D1F]">Escalation F1</td>
@@ -201,7 +219,7 @@ export const App: React.FC = () => {
                   </tr>
                   <tr>
                     <td className="py-2 text-[#1D1D1F]">Expected Calibration Error (ECE) ↓</td>
-                    <td className="py-2 text-[#6E6E73]">{evalResults.systems.trivial_baseline.calibration.ece.toFixed(3)}</td>
+                    <td className="py-2 text-[#86868B]">0.000* (artifact)</td>
                     <td className="py-2 text-[#6E6E73]">{evalResults.systems.simple_baseline.calibration.ece.toFixed(3)}</td>
                     <td className="py-2 font-medium text-[#2E7D5B]">{evalResults.systems.calibrated_trust_first.calibration.ece.toFixed(3)}</td>
                   </tr>
@@ -214,8 +232,8 @@ export const App: React.FC = () => {
                   <tr>
                     <td className="py-2 text-[#1D1D1F]">Judge Overall Score (1-5) ↑</td>
                     <td className="py-2 text-[#6E6E73]">{evalResults.systems.trivial_baseline.judge_rubric.overall_score.toFixed(2)}</td>
-                    <td className="py-2 text-[#6E6E73]">{evalResults.systems.simple_baseline.judge_rubric.overall_score.toFixed(2)}</td>
-                    <td className="py-2 font-medium text-[#0071E3]">{evalResults.systems.calibrated_trust_first.judge_rubric.overall_score.toFixed(2)}</td>
+                    <td className="py-2 font-medium text-[#1D1D1F]">{evalResults.systems.simple_baseline.judge_rubric.overall_score.toFixed(2)}</td>
+                    <td className="py-2 text-[#6E6E73]">{evalResults.systems.calibrated_trust_first.judge_rubric.overall_score.toFixed(2)}</td>
                   </tr>
                 </tbody>
               </table>
