@@ -82,9 +82,9 @@ The evaluation set contains **180 hand-verified customer scenarios** sampled fro
 
 ---
 
-## 3. Failure Analysis & Diagnostics
+## 3. Failure Analysis: Top 5 Failure Modes with Real Examples and Hypotheses
 
-### 3.1 LLM-Judge Discrimination & Pairwise Comparisons
+### Failure Mode 1: LLM-Judge Ceiling Compression & Critical Misdirection (Fixed)
 In early runs, judge scores clustered at 4.42 / 4.67 / 4.74, indicating ceiling compression where a fixed canned reply was awarded 4.42/5. Diagnostic audit of evaluation transcripts revealed that the initial rubric lacked topical relevance anchors and awarded baseline points to any polite phrasing containing words like "app" or "contact":
 
 > **Diagnostic Transcript (Pre-Fix Failure)**:  
@@ -98,7 +98,7 @@ In early runs, judge scores clustered at 4.42 / 4.67 / 4.74, indicating ceiling 
 - **Trust-First scored 4.15 / 5.0**, achieving **100% pairwise win rate against Trivial** (180 wins, 0 ties, 0 losses).
 - **Pairwise Comparison vs. Simple Baseline**: Trust-First recorded **34 wins (18.9%), 89 ties (49.4%), and 57 losses (31.7%)**. Trust-First **loses more pairwise comparisons to Simple than it wins**. Rather than concealing this counter-intuitive result, we diagnose its mechanical cause below.
 
-### 3.2 Why Trust-First Scores Lower Than Simple on the LLM-Judge (4.15 vs. 4.18)
+### Failure Mode 2: Deterministic Paraphrase Penalty on Rare Queries (Why Trust-First Scores 4.15 vs. Simple 4.18)
 To understand why Trust-First loses 31.7% of pairwise head-to-heads to the Simple baseline, we pulled and analyzed the 3 lowest-scoring Trust-First evaluation transcripts (`case_39`, `case_0`, `case_4`). The gap arises from two specific structural dynamics rather than a lack of conversational capability:
 
 1. **Verbatim Text Copying Maximizes Rubric Faithfulness (4.95 vs. 4.00)**:  
@@ -112,7 +112,7 @@ To understand why Trust-First loses 31.7% of pairwise head-to-heads to the Simpl
    Similarly on **Query #0** (*"I ordered on July 25th. I still do not receive anything and you already charged me... Unacceptable 😡"*), Simple copied a human tweet asking *"Hi, sorry, what's the status of the tracking and delivery date? Have you looked into an A-Z Claim:"* (Score: 4.44), whereas Trust-First safely routed the angry customer via intake deflection *"Please fill this form and I’ll contact you at the earliest"* (Score: 3.85, Resolution Likelihood: 1.8).  
    Because the anchored judge requires issue-specific entity overlap ("beta code", "claim", "tracking") to award high resolution likelihood, Trust-First's generic deflection templates are penalized (Resolution Likelihood 1.8 vs 3.5), despite being the safer action. When upgraded to Live LLM Mode (Mode 2), dynamic generation synthesizes contextual issue keywords, but in deterministic offline mode, safety-first intake templates trade conversational specificity for zero false negatives.
 
-### 3.3 Simple Baseline Degeneracy Audit: Threshold Recalibration ($\tau = 0.35$)
+### Failure Mode 3: Baseline Threshold Degeneracy & Always-Escalate Collapse (Recalibrated to $\tau = 0.35$)
 A critical audit was conducted to determine whether the Simple baseline was a real baseline or an always-escalate strawman:
 - **Initial Flaw**: With an initial cosine threshold of $0.65$ (or $0.75$), TF-IDF similarities across short customer tweets (mean: 0.318, max: 0.682) meant that **179 of 180 golden queries (99.4%)** fell below the threshold. The baseline was essentially an always-escalate policy with 0.6% automation coverage, making any metric win over it meaningless.
 - **Recalibrated Baseline ($\tau = 0.35$)**: We recalibrated Simple's threshold to $\tau = 0.35$, yielding a genuine decision distribution:
@@ -121,15 +121,11 @@ A critical audit was conducted to determine whether the Simple baseline was a re
   - Performance: Precision = **0.291**, Recall = **0.804**, F1 = **0.428**, AUROC = **0.572**.
 - **The Honest Takeaway**: Under a tuned threshold, Simple actually achieves a slightly higher escalation precision (**0.291 vs. 0.280**) than Trust-First. Trust-First intentionally accepts lower precision (more false alarms) because it guarantees **97.8% recall on safety-critical escalations** (0.978 vs. 0.804 for Simple) and achieves far superior ranking discrimination (**AUROC 0.694 vs. 0.572**) and calibration (**ECE 0.312 vs. 0.427**). Simple is thus a tuned, competitive baseline, and the trade-off is mathematically transparent.
 
-### 3.4 Coarse Intent Accuracy Trade-off (0.711 vs 0.728)
-The Simple baseline achieved 0.728 coarse accuracy compared to 0.711 for the Trust-First system. The hierarchical classifier introduces safety tiers and conditional sub-intent modeling; this structural constraint slightly depresses coarse classification on boundary edge cases in exchange for a massive gain in **sub-intent Macro F1 (0.224 vs 0.122, +83.6%)** and **escalation AUROC (0.694 vs 0.572, +21.3%)**.
+### Failure Mode 4: Out-of-Taxonomy Cold Cases Causing Zero Recall on Classifier Layer
+`general_other` was assigned as the ground truth label for the 10 deliberate cold-case scenarios (e.g. AWS Greengrass IoT, Bitcoin payments, drone collisions) to test out-of-domain detection. However, `taxonomy.json` defines only 5 operational categories (`order_delivery`, `payments_refunds`, `account_access`, `product_digital`, `abuse_safety`). Because `general_other` is an out-of-taxonomy class, the 5-way classifier can never predict it, resulting in 0% recall. Crucially, **the escalation gate correctly caught 100% of these cases** via the cold-case similarity threshold ($S_{\text{top}} \le 0.36$), proving that out-of-domain safety is achieved at the gate level rather than the classifier level.
 
-### 3.5 Root Cause of Coarse Worst-Class F1 = 0.000
-All three systems recorded 0.000 F1 on specific minority classes. The underlying causes are distinct:
-1. **Trust-First System on `general_other` (Support: n=10, F1 = 0.000)**:  
-   `general_other` was assigned as the ground truth label for the 10 deliberate cold-case scenarios (e.g. AWS Greengrass IoT, Bitcoin payments, drone collisions) to test out-of-domain detection. However, `taxonomy.json` defines only 5 operational categories (`order_delivery`, `payments_refunds`, `account_access`, `product_digital`, `abuse_safety`). Because `general_other` is an out-of-taxonomy class, the 5-way classifier can never predict it, resulting in 0% recall. Crucially, **the escalation gate correctly caught 100% of these cases** via the cold-case similarity threshold ($S_{\text{top}} \le 0.36$), proving that out-of-domain safety is achieved at the gate level rather than the classifier level.
-2. **Baselines on `abuse_safety` (Support: n=7, F1 = 0.000)**:  
-   `abuse_safety` represents only 0.8% of raw Twitter data and 7 items in the golden set. The Trivial baseline never predicts it; the Simple baseline (TF-IDF Ridge) completely collapsed on this minority class due to severe class imbalance. In contrast, the Trust-First system achieved high recall on `abuse_safety` through explicit keyword safety overrides.
+### Failure Mode 5: Linear Classifier Collapse on Severe Minority Safety Classes
+`abuse_safety` represents only 0.8% of raw Twitter data and 7 items in the golden set. The Trivial baseline never predicts it; the Simple baseline (TF-IDF Ridge) completely collapsed on this minority class (F1 = 0.000) due to severe class imbalance. In contrast, the Trust-First system achieved high recall on `abuse_safety` through explicit keyword safety overrides.
 
 ---
 
