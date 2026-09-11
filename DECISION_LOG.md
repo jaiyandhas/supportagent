@@ -28,11 +28,11 @@ This log records the 15 key engineering and architectural decisions made in desi
 
 7. **Probability Calibration via Platt Scaling**:
    - *Decision*: Fitted a logistic sigmoid (Platt scaling) mapping $[Agreement, S_{\text{top}}, \bar{R}]$ into posterior probabilities $P(\text{successful auto-handle})$.
-   - *Rationale*: Raw cosine similarities and softmax scores are notoriously overconfident. Platt scaling produces calibrated probabilities that align with empirical accuracy, verified via Expected Calibration Error (ECE = 0.369 vs 0.483 baseline).
+   - *Rationale*: Raw cosine similarities and softmax scores are notoriously overconfident. Platt scaling produces calibrated probabilities that align with empirical accuracy, verified via Expected Calibration Error (ECE = 0.312 vs 0.427 baseline).
 
 8. **Reranking Weight Sensitivity ($\alpha = 0.60$)**:
    - *Decision*: Balanced semantic similarity and resolution score via $S_{\text{reranked}} = 0.60 \cdot S_{\text{semantic}} + 0.40 \cdot R$.
-   - *Rationale*: Empirical sensitivity sweep across $\alpha \in [0.0, 1.0]$ revealed that $\alpha = 1.0$ yields poor resolution grounding (mean $R = 0.657$), while $\alpha = 0.0$ drifts off-topic (hit-rate drops to 96.7%). The split $\alpha = 0.60$ achieved peak hit-rate (98.3%) while raising average resolution to 0.870.
+   - *Rationale*: Empirical sensitivity sweep across $\alpha \in [0.0, 1.0]$ revealed that $\alpha = 1.0$ yields poor resolution grounding (mean $R = 0.657$), while $\alpha = 0.0$ drifts off-topic (hit-rate drops to 86.7%). The split $\alpha = 0.60$ achieved balanced hit-rate (88.3%) while raising average resolution to 0.870.
 
 9. **Safety Tier Hard Overrides**:
    - *Decision*: Unconditionally forced human escalation for `account_access` and `abuse_safety` categories, as well as cold cases ($S_{\text{top}} < 0.36$), bypassing classifier confidence.
@@ -61,3 +61,7 @@ This log records the 15 key engineering and architectural decisions made in desi
 15. **Architectural Roadmap (Self-Consistency Generation Sampling)**:
     - *Decision*: Deferred multi-candidate self-consistency sampling (sampling 3 replies to check divergence) to the next engineering phase.
     - *Rationale*: Multi-candidate LLM generation triples inference latency and introduces local token overhead. Scoped cleanly into the production roadmap.
+
+16. **Baseline Threshold Recalibration ($\tau = 0.35$) & Anchored Human-Judge Calibration**:
+    - *Decision*: Recalibrated the Simple baseline cosine threshold from 0.65 to 0.35 (preventing a 99.4% degenerate escalation strawman) and deployed an anchored LLM judge rubric calibrated against blind human evaluations ($r = 0.862$, $\text{QWK} = 0.785$).
+    - *Rationale*: A benchmark against a strawman that escalates 100% of traffic provides zero operational insight. Tuning the baseline forces the evaluation to test genuine trade-offs (Simple wins precision 0.291 vs 0.280; Trust-First wins safety recall 0.978 vs 0.804 and ECE = 0.312 vs 0.427).

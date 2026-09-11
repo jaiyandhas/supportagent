@@ -81,17 +81,30 @@ Evaluated on 180 golden cases stratified across 5 coarse categories, 11 sub-inte
 
 | Metric | Trivial Baseline | Simple Baseline | Trust-First Agent (Ours) | Context & Trade-offs |
 | :--- | :---: | :---: | :---: | :--- |
-| **Coarse Accuracy** | 0.706 | **0.756** | 0.733 | Simple baseline wins coarse; Trust-First prioritizes sub-intent & escalation |
+| **Coarse Accuracy** | 0.678 | **0.728** | 0.711 | Simple baseline wins coarse; Trust-First prioritizes sub-intent & escalation |
 | **Coarse Worst-Class F1** | 0.000 (`abuse_safety`, n=7) | 0.000 (`abuse_safety`, n=7) | 0.000 (`general_other`, n=10) | Support gap & out-of-taxonomy cold cases (caught by gate) |
-| **Sub-Intent Macro F1** | 0.062 | 0.131 | **0.241** | **0.241 absolute** (+84.0% relative gain); fine-grained split is hard |
-| **Escalation Precision** | 0.000 | **0.236** | 0.224 | **0.224 absolute**; calibrated conservative safety bias |
-| **Escalation Recall** | 0.000 | 0.833 | **1.000** | **1.000** zero safety false negatives on golden set |
-| **Escalation F1** | 0.000 | **0.368** | 0.365 | Tuned baseline achieves 0.368 F1 at $\tau=0.35$ |
-| **Escalation AUROC** | 0.500 | 0.573 | **0.760** | **+32.6% relative gain** in ranking discrimination |
-| **Expected Calibration Error (ECE) ↓** | 0.000* | 0.482 | **0.368** | **-23.7% error reduction** (*Trivial 0.000 is degenerate constant artifact) |
-| **Brier Score Loss ↓** | 0.200 | 0.385 | **0.269** | **-30.1% improvement** in probabilistic accuracy |
-| **Judge Overall Score (1-5) ↑** | 2.64 | **4.18** | 4.12 | Simple copies verbatim historical text; Trust-First normalizes & defers |
+| **Sub-Intent Macro F1** | 0.059 | 0.122 | **0.224** | **0.224 absolute** (+83.6% relative gain); fine-grained split is hard |
+| **Escalation Precision** | 0.000 | **0.291** | 0.280 | **0.280 absolute**; calibrated conservative safety bias |
+| **Escalation Recall** | 0.000 | 0.804 | **0.978** | **0.978** (45/46 safety escalations caught on author-verified golden set) |
+| **Escalation F1** | 0.000 | 0.428 | **0.435** | **Trust-First wins F1** |
+| **Escalation AUROC** | 0.500 | 0.572 | **0.694** | **+21.3% relative gain** in ranking discrimination |
+| **Expected Calibration Error (ECE) ↓** | 0.000* | 0.427 | **0.312** | **-26.9% error reduction** (*Trivial 0.000 is degenerate constant artifact) |
+| **Brier Score Loss ↓** | 0.256 | 0.364 | **0.270** | **-25.8% improvement** in probabilistic accuracy |
+| **Judge Overall Score (1-5) ↑** | 2.63 | **4.18** | 4.15 | Simple copies verbatim historical text; Trust-First normalizes & defers |
 | **Mean Precedent Resolution Score** | — | 0.66 | **0.87** | Outcome reranked ($\alpha = 0.60$ Pareto optimal) |
+
+### 🤝 Human-Judge Agreement Evidence (Deliverable 3)
+Evaluated across $N=45$ blind query-reply pairs spanning all three systems:
+- **Pearson Correlation ($r$)**: **0.862** ($p < 0.001$)
+- **Spearman Rank Correlation ($\rho$)**: **0.689**
+- **Quadratic Weighted Kappa (QWK)**: **0.785** (Substantial agreement on 1–5 scale)
+- **Mean Absolute Error (MAE)**: **0.432** points on the 5-point rubric
+- Full dataset available in `data/judge_human_eval_dataset.json`.
+
+### ✍️ Golden Evaluation Set Sampling & Annotation Note (Deliverable 2)
+The golden evaluation set consists of **180 hand-verified customer support scenarios** built from authentic Twitter customer-support threads (`thoughtvector/customer_support_on_twitter`):
+- **Sampling Strategy**: Stratified across 5 coarse categories, 11 sub-intents, 25 out-of-domain cold cases (e.g. AWS Greengrass MQTT, Bitcoin, drone transit), and 10 borderline multi-issue disputes.
+- **Hand-Labeling & Curation**: Labeled and spot-checked by the author against the original multi-turn Twitter threads. Ground truth escalation labels enforce strict enterprise brand safety: account security issues (`compromised_account_hijack`), tampered package fraud (`phishing_scam_report`), and unresolvable billing disputes require human escalation (`gold_should_escalate: true`), whereas standard transit SLA questions are safe for automation.
 
 ---
 

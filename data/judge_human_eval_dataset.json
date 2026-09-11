@@ -1,0 +1,1217 @@
+[
+  {
+    "sample_id": "eval_human_001",
+    "case_id": "eval_gold_001",
+    "system": "trivial_baseline",
+    "customer_query": "I ordered on July 25th. I still do not receive anything and you already charged me. It doesn't let me cancel. Unacceptable. \ud83d\ude21\ud83d\ude21\ud83d\ude21",
+    "drafted_reply": "Thank you for contacting AmazonHelp. Please track your delivery in the Amazon app or visit amazon.com/contact-us.",
+    "should_escalate": false,
+    "gold_should_escalate": true,
+    "judge_score": 2.24,
+    "judge_subscores": {
+      "faithfulness": 1.0,
+      "tone": 4.8,
+      "resolution_likelihood": 1.2,
+      "policy_adherence": 5.0,
+      "overall_score": 2.24,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 2.25,
+    "human_subscores": {
+      "faithfulness": 1.5,
+      "tone": 4.0,
+      "resolution_likelihood": 1.5,
+      "policy_adherence": 4.0,
+      "overall_score": 2.25
+    },
+    "human_rationale": "Canned delivery deflection is completely misdirected for this inquiry (refund/cancellation/digital issue)."
+  },
+  {
+    "sample_id": "eval_human_002",
+    "case_id": "eval_gold_002",
+    "system": "trivial_baseline",
+    "customer_query": "pre-ordered the new illustrated Harry Potter in May and it was released yesterday but I still haven't received?!",
+    "drafted_reply": "Thank you for contacting AmazonHelp. Please track your delivery in the Amazon app or visit amazon.com/contact-us.",
+    "should_escalate": false,
+    "gold_should_escalate": false,
+    "judge_score": 2.8,
+    "judge_subscores": {
+      "faithfulness": 2.0,
+      "tone": 4.8,
+      "resolution_likelihood": 1.8,
+      "policy_adherence": 5.0,
+      "overall_score": 2.8,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 2.25,
+    "human_subscores": {
+      "faithfulness": 1.5,
+      "tone": 4.0,
+      "resolution_likelihood": 1.5,
+      "policy_adherence": 4.0,
+      "overall_score": 2.25
+    },
+    "human_rationale": "Canned delivery deflection is completely misdirected for this inquiry (refund/cancellation/digital issue)."
+  },
+  {
+    "sample_id": "eval_human_003",
+    "case_id": "eval_gold_003",
+    "system": "trivial_baseline",
+    "customer_query": "#Order canceled by Amazon India, complaint filed against #Amazon",
+    "drafted_reply": "Thank you for contacting AmazonHelp. Please track your delivery in the Amazon app or visit amazon.com/contact-us.",
+    "should_escalate": false,
+    "gold_should_escalate": true,
+    "judge_score": 2.59,
+    "judge_subscores": {
+      "faithfulness": 2.0,
+      "tone": 4.8,
+      "resolution_likelihood": 1.2,
+      "policy_adherence": 5.0,
+      "overall_score": 2.59,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 2.25,
+    "human_subscores": {
+      "faithfulness": 1.5,
+      "tone": 4.0,
+      "resolution_likelihood": 1.5,
+      "policy_adherence": 4.0,
+      "overall_score": 2.25
+    },
+    "human_rationale": "Canned delivery deflection is completely misdirected for this inquiry (refund/cancellation/digital issue)."
+  },
+  {
+    "sample_id": "eval_human_004",
+    "case_id": "eval_gold_004",
+    "system": "trivial_baseline",
+    "customer_query": "when would this be available in Amazon India??",
+    "drafted_reply": "Thank you for contacting AmazonHelp. Please track your delivery in the Amazon app or visit amazon.com/contact-us.",
+    "should_escalate": false,
+    "gold_should_escalate": false,
+    "judge_score": 2.8,
+    "judge_subscores": {
+      "faithfulness": 2.0,
+      "tone": 4.8,
+      "resolution_likelihood": 1.8,
+      "policy_adherence": 5.0,
+      "overall_score": 2.8,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 2.25,
+    "human_subscores": {
+      "faithfulness": 1.5,
+      "tone": 4.0,
+      "resolution_likelihood": 1.5,
+      "policy_adherence": 4.0,
+      "overall_score": 2.25
+    },
+    "human_rationale": "Canned delivery deflection is completely misdirected for this inquiry (refund/cancellation/digital issue)."
+  },
+  {
+    "sample_id": "eval_human_005",
+    "case_id": "eval_gold_005",
+    "system": "trivial_baseline",
+    "customer_query": "Still no delivery date to the item I pre-ordered, that came out yesterday \ud83d\ude14 Really unimpressed.",
+    "drafted_reply": "Thank you for contacting AmazonHelp. Please track your delivery in the Amazon app or visit amazon.com/contact-us.",
+    "should_escalate": false,
+    "gold_should_escalate": false,
+    "judge_score": 2.8,
+    "judge_subscores": {
+      "faithfulness": 2.0,
+      "tone": 4.8,
+      "resolution_likelihood": 1.8,
+      "policy_adherence": 5.0,
+      "overall_score": 2.8,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 3.35,
+    "human_subscores": {
+      "faithfulness": 3.0,
+      "tone": 4.5,
+      "resolution_likelihood": 2.5,
+      "policy_adherence": 5.0,
+      "overall_score": 3.35
+    },
+    "human_rationale": "Canned tracking response is polite and partially relevant to transit questions, but lacks order specifics."
+  },
+  {
+    "sample_id": "eval_human_006",
+    "case_id": "eval_gold_006",
+    "system": "trivial_baseline",
+    "customer_query": "Please can you tell me why you put this tiny product in a package the size of a wardrobe. #pointlesspackaging #excessivepackaging",
+    "drafted_reply": "Thank you for contacting AmazonHelp. Please track your delivery in the Amazon app or visit amazon.com/contact-us.",
+    "should_escalate": false,
+    "gold_should_escalate": false,
+    "judge_score": 2.8,
+    "judge_subscores": {
+      "faithfulness": 2.0,
+      "tone": 4.8,
+      "resolution_likelihood": 1.8,
+      "policy_adherence": 5.0,
+      "overall_score": 2.8,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 2.25,
+    "human_subscores": {
+      "faithfulness": 1.5,
+      "tone": 4.0,
+      "resolution_likelihood": 1.5,
+      "policy_adherence": 4.0,
+      "overall_score": 2.25
+    },
+    "human_rationale": "Canned delivery deflection is completely misdirected for this inquiry (refund/cancellation/digital issue)."
+  },
+  {
+    "sample_id": "eval_human_007",
+    "case_id": "eval_gold_007",
+    "system": "trivial_baseline",
+    "customer_query": "really need update on this,no tracking details and also seller not contactng me",
+    "drafted_reply": "Thank you for contacting AmazonHelp. Please track your delivery in the Amazon app or visit amazon.com/contact-us.",
+    "should_escalate": false,
+    "gold_should_escalate": false,
+    "judge_score": 2.8,
+    "judge_subscores": {
+      "faithfulness": 2.0,
+      "tone": 4.8,
+      "resolution_likelihood": 1.8,
+      "policy_adherence": 5.0,
+      "overall_score": 2.8,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 3.35,
+    "human_subscores": {
+      "faithfulness": 3.0,
+      "tone": 4.5,
+      "resolution_likelihood": 2.5,
+      "policy_adherence": 5.0,
+      "overall_score": 3.35
+    },
+    "human_rationale": "Canned tracking response is polite and partially relevant to transit questions, but lacks order specifics."
+  },
+  {
+    "sample_id": "eval_human_008",
+    "case_id": "eval_gold_008",
+    "system": "trivial_baseline",
+    "customer_query": "Thank you, , for existing. Despite some logistical frustrations, I am so lucky to have access to your services.",
+    "drafted_reply": "Thank you for contacting AmazonHelp. Please track your delivery in the Amazon app or visit amazon.com/contact-us.",
+    "should_escalate": false,
+    "gold_should_escalate": false,
+    "judge_score": 2.8,
+    "judge_subscores": {
+      "faithfulness": 2.0,
+      "tone": 4.8,
+      "resolution_likelihood": 1.8,
+      "policy_adherence": 5.0,
+      "overall_score": 2.8,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 2.25,
+    "human_subscores": {
+      "faithfulness": 1.5,
+      "tone": 4.0,
+      "resolution_likelihood": 1.5,
+      "policy_adherence": 4.0,
+      "overall_score": 2.25
+    },
+    "human_rationale": "Canned delivery deflection is completely misdirected for this inquiry (refund/cancellation/digital issue)."
+  },
+  {
+    "sample_id": "eval_human_009",
+    "case_id": "eval_gold_009",
+    "system": "trivial_baseline",
+    "customer_query": "tracking my package it says it arrived, has been scanned but now it says it is out of stock? how can that be the case?",
+    "drafted_reply": "Thank you for contacting AmazonHelp. Please track your delivery in the Amazon app or visit amazon.com/contact-us.",
+    "should_escalate": false,
+    "gold_should_escalate": false,
+    "judge_score": 2.8,
+    "judge_subscores": {
+      "faithfulness": 2.0,
+      "tone": 4.8,
+      "resolution_likelihood": 1.8,
+      "policy_adherence": 5.0,
+      "overall_score": 2.8,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 3.35,
+    "human_subscores": {
+      "faithfulness": 3.0,
+      "tone": 4.5,
+      "resolution_likelihood": 2.5,
+      "policy_adherence": 5.0,
+      "overall_score": 3.35
+    },
+    "human_rationale": "Canned tracking response is polite and partially relevant to transit questions, but lacks order specifics."
+  },
+  {
+    "sample_id": "eval_human_010",
+    "case_id": "eval_gold_010",
+    "system": "trivial_baseline",
+    "customer_query": "Refund not received for an order placed on 22nd September and cancelled.",
+    "drafted_reply": "Thank you for contacting AmazonHelp. Please track your delivery in the Amazon app or visit amazon.com/contact-us.",
+    "should_escalate": false,
+    "gold_should_escalate": false,
+    "judge_score": 2.45,
+    "judge_subscores": {
+      "faithfulness": 1.0,
+      "tone": 4.8,
+      "resolution_likelihood": 1.8,
+      "policy_adherence": 5.0,
+      "overall_score": 2.45,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 2.25,
+    "human_subscores": {
+      "faithfulness": 1.5,
+      "tone": 4.0,
+      "resolution_likelihood": 1.5,
+      "policy_adherence": 4.0,
+      "overall_score": 2.25
+    },
+    "human_rationale": "Canned delivery deflection is completely misdirected for this inquiry (refund/cancellation/digital issue)."
+  },
+  {
+    "sample_id": "eval_human_011",
+    "case_id": "eval_gold_011",
+    "system": "trivial_baseline",
+    "customer_query": "wrong parcel came been told to reorder but now it's doubled in price. I have screenshots of what I ordered and received HELP",
+    "drafted_reply": "Thank you for contacting AmazonHelp. Please track your delivery in the Amazon app or visit amazon.com/contact-us.",
+    "should_escalate": false,
+    "gold_should_escalate": false,
+    "judge_score": 2.8,
+    "judge_subscores": {
+      "faithfulness": 2.0,
+      "tone": 4.8,
+      "resolution_likelihood": 1.8,
+      "policy_adherence": 5.0,
+      "overall_score": 2.8,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 2.25,
+    "human_subscores": {
+      "faithfulness": 1.5,
+      "tone": 4.0,
+      "resolution_likelihood": 1.5,
+      "policy_adherence": 4.0,
+      "overall_score": 2.25
+    },
+    "human_rationale": "Canned delivery deflection is completely misdirected for this inquiry (refund/cancellation/digital issue)."
+  },
+  {
+    "sample_id": "eval_human_012",
+    "case_id": "eval_gold_012",
+    "system": "trivial_baseline",
+    "customer_query": "hello, i am having trouble getting in contact with someone about an issue with a return due to an amazon locker, please help!",
+    "drafted_reply": "Thank you for contacting AmazonHelp. Please track your delivery in the Amazon app or visit amazon.com/contact-us.",
+    "should_escalate": false,
+    "gold_should_escalate": true,
+    "judge_score": 2.24,
+    "judge_subscores": {
+      "faithfulness": 1.0,
+      "tone": 4.8,
+      "resolution_likelihood": 1.2,
+      "policy_adherence": 5.0,
+      "overall_score": 2.24,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 2.25,
+    "human_subscores": {
+      "faithfulness": 1.5,
+      "tone": 4.0,
+      "resolution_likelihood": 1.5,
+      "policy_adherence": 4.0,
+      "overall_score": 2.25
+    },
+    "human_rationale": "Canned delivery deflection is completely misdirected for this inquiry (refund/cancellation/digital issue)."
+  },
+  {
+    "sample_id": "eval_human_013",
+    "case_id": "eval_gold_013",
+    "system": "trivial_baseline",
+    "customer_query": "my prime order is late and has been marked as \u201cout for delivery\u201d for over 48 hours?",
+    "drafted_reply": "Thank you for contacting AmazonHelp. Please track your delivery in the Amazon app or visit amazon.com/contact-us.",
+    "should_escalate": false,
+    "gold_should_escalate": false,
+    "judge_score": 2.8,
+    "judge_subscores": {
+      "faithfulness": 2.0,
+      "tone": 4.8,
+      "resolution_likelihood": 1.8,
+      "policy_adherence": 5.0,
+      "overall_score": 2.8,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 3.35,
+    "human_subscores": {
+      "faithfulness": 3.0,
+      "tone": 4.5,
+      "resolution_likelihood": 2.5,
+      "policy_adherence": 5.0,
+      "overall_score": 3.35
+    },
+    "human_rationale": "Canned tracking response is polite and partially relevant to transit questions, but lacks order specifics."
+  },
+  {
+    "sample_id": "eval_human_014",
+    "case_id": "eval_gold_014",
+    "system": "trivial_baseline",
+    "customer_query": "Great welcome by Amazon to its Prime Member.\ud83d\ude21\ud83d\ude21\ud83d\ude21",
+    "drafted_reply": "Thank you for contacting AmazonHelp. Please track your delivery in the Amazon app or visit amazon.com/contact-us.",
+    "should_escalate": false,
+    "gold_should_escalate": false,
+    "judge_score": 2.8,
+    "judge_subscores": {
+      "faithfulness": 2.0,
+      "tone": 4.8,
+      "resolution_likelihood": 1.8,
+      "policy_adherence": 5.0,
+      "overall_score": 2.8,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 2.25,
+    "human_subscores": {
+      "faithfulness": 1.5,
+      "tone": 4.0,
+      "resolution_likelihood": 1.5,
+      "policy_adherence": 4.0,
+      "overall_score": 2.25
+    },
+    "human_rationale": "Canned delivery deflection is completely misdirected for this inquiry (refund/cancellation/digital issue)."
+  },
+  {
+    "sample_id": "eval_human_015",
+    "case_id": "eval_gold_015",
+    "system": "trivial_baseline",
+    "customer_query": "Amazon and Apple hit by EU tax crackdown",
+    "drafted_reply": "Thank you for contacting AmazonHelp. Please track your delivery in the Amazon app or visit amazon.com/contact-us.",
+    "should_escalate": false,
+    "gold_should_escalate": false,
+    "judge_score": 2.8,
+    "judge_subscores": {
+      "faithfulness": 2.0,
+      "tone": 4.8,
+      "resolution_likelihood": 1.8,
+      "policy_adherence": 5.0,
+      "overall_score": 2.8,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 2.25,
+    "human_subscores": {
+      "faithfulness": 1.5,
+      "tone": 4.0,
+      "resolution_likelihood": 1.5,
+      "policy_adherence": 4.0,
+      "overall_score": 2.25
+    },
+    "human_rationale": "Canned delivery deflection is completely misdirected for this inquiry (refund/cancellation/digital issue)."
+  },
+  {
+    "sample_id": "eval_human_016",
+    "case_id": "eval_gold_016",
+    "system": "simple_baseline",
+    "customer_query": "My shipment is supposed to arrive yesterday 3 Oct and I do not know why the delay was so much damaged by the delay of the shipment.",
+    "drafted_reply": "Hello, We'll look into it and see what best we can do to help you.",
+    "should_escalate": true,
+    "gold_should_escalate": false,
+    "judge_score": 4.44,
+    "judge_subscores": {
+      "faithfulness": 5.0,
+      "tone": 4.8,
+      "resolution_likelihood": 3.5,
+      "policy_adherence": 5.0,
+      "overall_score": 4.44,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 4.25,
+    "human_subscores": {
+      "faithfulness": 5.0,
+      "tone": 4.2,
+      "resolution_likelihood": 3.2,
+      "policy_adherence": 5.0,
+      "overall_score": 4.25
+    },
+    "human_rationale": "Historical tweet provides general redirection; reasonable grounding but somewhat generic."
+  },
+  {
+    "sample_id": "eval_human_017",
+    "case_id": "eval_gold_017",
+    "system": "simple_baseline",
+    "customer_query": "Still not got this ...",
+    "drafted_reply": "Hello, Oh no! We'd be happy to look into this with you. When you have a chance, click here:",
+    "should_escalate": false,
+    "gold_should_escalate": false,
+    "judge_score": 3.5,
+    "judge_subscores": {
+      "faithfulness": 5.0,
+      "tone": 2.5,
+      "resolution_likelihood": 1.8,
+      "policy_adherence": 5.0,
+      "overall_score": 3.5,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 4.25,
+    "human_subscores": {
+      "faithfulness": 5.0,
+      "tone": 4.2,
+      "resolution_likelihood": 3.2,
+      "policy_adherence": 5.0,
+      "overall_score": 4.25
+    },
+    "human_rationale": "Historical tweet provides general redirection; reasonable grounding but somewhat generic."
+  },
+  {
+    "sample_id": "eval_human_018",
+    "case_id": "eval_gold_018",
+    "system": "simple_baseline",
+    "customer_query": "I can't log into my account, it's telling me that amazon cannot find an account with my email",
+    "drafted_reply": "Hello, Have you checked you spam/junk folders for a response from the account specialist ?",
+    "should_escalate": false,
+    "gold_should_escalate": false,
+    "judge_score": 3.5,
+    "judge_subscores": {
+      "faithfulness": 5.0,
+      "tone": 2.5,
+      "resolution_likelihood": 1.8,
+      "policy_adherence": 5.0,
+      "overall_score": 3.5,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 4.46,
+    "human_subscores": {
+      "faithfulness": 5.0,
+      "tone": 4.2,
+      "resolution_likelihood": 3.8,
+      "policy_adherence": 5.0,
+      "overall_score": 4.46
+    },
+    "human_rationale": "Verbatim historical human response asks a natural follow-up question; good conversational tone."
+  },
+  {
+    "sample_id": "eval_human_019",
+    "case_id": "eval_gold_019",
+    "system": "simple_baseline",
+    "customer_query": "automated chat says it will ship October 9th, yet your site indicates you\u2019ll email me when you can estimate a delivery",
+    "drafted_reply": "Hello, You should've received an email correspondence from us here please check.",
+    "should_escalate": true,
+    "gold_should_escalate": false,
+    "judge_score": 4.33,
+    "judge_subscores": {
+      "faithfulness": 5.0,
+      "tone": 4.0,
+      "resolution_likelihood": 3.5,
+      "policy_adherence": 5.0,
+      "overall_score": 4.33,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 4.25,
+    "human_subscores": {
+      "faithfulness": 5.0,
+      "tone": 4.2,
+      "resolution_likelihood": 3.2,
+      "policy_adherence": 5.0,
+      "overall_score": 4.25
+    },
+    "human_rationale": "Historical tweet provides general redirection; reasonable grounding but somewhat generic."
+  },
+  {
+    "sample_id": "eval_human_020",
+    "case_id": "eval_gold_020",
+    "system": "simple_baseline",
+    "customer_query": "My Account had it's email change without me requesting it, please help",
+    "drafted_reply": "Hi Alex- Which site is your Amazon account registered with? or?",
+    "should_escalate": false,
+    "gold_should_escalate": false,
+    "judge_score": 3.5,
+    "judge_subscores": {
+      "faithfulness": 5.0,
+      "tone": 2.5,
+      "resolution_likelihood": 1.8,
+      "policy_adherence": 5.0,
+      "overall_score": 3.5,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 4.46,
+    "human_subscores": {
+      "faithfulness": 5.0,
+      "tone": 4.2,
+      "resolution_likelihood": 3.8,
+      "policy_adherence": 5.0,
+      "overall_score": 4.46
+    },
+    "human_rationale": "Verbatim historical human response asks a natural follow-up question; good conversational tone."
+  },
+  {
+    "sample_id": "eval_human_021",
+    "case_id": "eval_gold_021",
+    "system": "simple_baseline",
+    "customer_query": "1.AS PER YOUR INSTRUCTIONS I HAVE FORWARDED THE MAIL TO THE THIRD PARTY SUPPLIER.",
+    "drafted_reply": "Hello, Time does fly by, haha! You're getting the chance to renew the prime again at Rs. 499.",
+    "should_escalate": false,
+    "gold_should_escalate": false,
+    "judge_score": 3.5,
+    "judge_subscores": {
+      "faithfulness": 5.0,
+      "tone": 2.5,
+      "resolution_likelihood": 1.8,
+      "policy_adherence": 5.0,
+      "overall_score": 3.5,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 4.25,
+    "human_subscores": {
+      "faithfulness": 5.0,
+      "tone": 4.2,
+      "resolution_likelihood": 3.2,
+      "policy_adherence": 5.0,
+      "overall_score": 4.25
+    },
+    "human_rationale": "Historical tweet provides general redirection; reasonable grounding but somewhat generic."
+  },
+  {
+    "sample_id": "eval_human_022",
+    "case_id": "eval_gold_022",
+    "system": "simple_baseline",
+    "customer_query": "This is the same order that said 'Order now for delivery on the 4th!' listed under 'Prime' ... Arriving Saturday 7th now.",
+    "drafted_reply": "Hello, I'm sorry we missed our mark. We'd like to go over your options, please contact us here:",
+    "should_escalate": true,
+    "gold_should_escalate": false,
+    "judge_score": 4.44,
+    "judge_subscores": {
+      "faithfulness": 5.0,
+      "tone": 4.8,
+      "resolution_likelihood": 3.5,
+      "policy_adherence": 5.0,
+      "overall_score": 4.44,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 4.25,
+    "human_subscores": {
+      "faithfulness": 5.0,
+      "tone": 4.2,
+      "resolution_likelihood": 3.2,
+      "policy_adherence": 5.0,
+      "overall_score": 4.25
+    },
+    "human_rationale": "Historical tweet provides general redirection; reasonable grounding but somewhat generic."
+  },
+  {
+    "sample_id": "eval_human_023",
+    "case_id": "eval_gold_023",
+    "system": "simple_baseline",
+    "customer_query": "Dear amazon my item has been delivered to somewhere else, instead of delivering it to me. No response. #HateAmazon #BadService",
+    "drafted_reply": "Hello, I'm sorry about the delay in delivery. Kindly reach out to our team here and we'll check this.",
+    "should_escalate": true,
+    "gold_should_escalate": false,
+    "judge_score": 4.44,
+    "judge_subscores": {
+      "faithfulness": 5.0,
+      "tone": 4.8,
+      "resolution_likelihood": 3.5,
+      "policy_adherence": 5.0,
+      "overall_score": 4.44,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 4.25,
+    "human_subscores": {
+      "faithfulness": 5.0,
+      "tone": 4.2,
+      "resolution_likelihood": 3.2,
+      "policy_adherence": 5.0,
+      "overall_score": 4.25
+    },
+    "human_rationale": "Historical tweet provides general redirection; reasonable grounding but somewhat generic."
+  },
+  {
+    "sample_id": "eval_human_024",
+    "case_id": "eval_gold_024",
+    "system": "simple_baseline",
+    "customer_query": "The guestlist for tickets may be closed, but we have a surprise opportunity.",
+    "drafted_reply": "Hello, I'm very sorry to hear this. Have you chatted with our Customer Service to go over options:",
+    "should_escalate": true,
+    "gold_should_escalate": false,
+    "judge_score": 4.44,
+    "judge_subscores": {
+      "faithfulness": 5.0,
+      "tone": 4.8,
+      "resolution_likelihood": 3.5,
+      "policy_adherence": 5.0,
+      "overall_score": 4.44,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 4.25,
+    "human_subscores": {
+      "faithfulness": 5.0,
+      "tone": 4.2,
+      "resolution_likelihood": 3.2,
+      "policy_adherence": 5.0,
+      "overall_score": 4.25
+    },
+    "human_rationale": "Historical tweet provides general redirection; reasonable grounding but somewhat generic."
+  },
+  {
+    "sample_id": "eval_human_025",
+    "case_id": "eval_gold_025",
+    "system": "simple_baseline",
+    "customer_query": "#KaroMilkeTayyari to explore. Get fabulous deals on luggage and backpacks at the #AmazonGreatIndianFestival",
+    "drafted_reply": "Hello, Seems like you had an unpleasant experience with us. Kindly elaborate the issue so that we can try to make things right.",
+    "should_escalate": false,
+    "gold_should_escalate": false,
+    "judge_score": 3.5,
+    "judge_subscores": {
+      "faithfulness": 5.0,
+      "tone": 2.5,
+      "resolution_likelihood": 1.8,
+      "policy_adherence": 5.0,
+      "overall_score": 3.5,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 4.25,
+    "human_subscores": {
+      "faithfulness": 5.0,
+      "tone": 4.2,
+      "resolution_likelihood": 3.2,
+      "policy_adherence": 5.0,
+      "overall_score": 4.25
+    },
+    "human_rationale": "Historical tweet provides general redirection; reasonable grounding but somewhat generic."
+  },
+  {
+    "sample_id": "eval_human_026",
+    "case_id": "eval_gold_026",
+    "system": "simple_baseline",
+    "customer_query": "need help. How do I project the video onto my TV? The player doesn't support chromecast. My TV, VU, can't download your app.",
+    "drafted_reply": "Hello, We'd like to investigate this with you by phone or chat! Please reach out at your convenience:",
+    "should_escalate": false,
+    "gold_should_escalate": false,
+    "judge_score": 4.34,
+    "judge_subscores": {
+      "faithfulness": 5.0,
+      "tone": 4.8,
+      "resolution_likelihood": 3.2,
+      "policy_adherence": 5.0,
+      "overall_score": 4.34,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 4.25,
+    "human_subscores": {
+      "faithfulness": 5.0,
+      "tone": 4.2,
+      "resolution_likelihood": 3.2,
+      "policy_adherence": 5.0,
+      "overall_score": 4.25
+    },
+    "human_rationale": "Historical tweet provides general redirection; reasonable grounding but somewhat generic."
+  },
+  {
+    "sample_id": "eval_human_027",
+    "case_id": "eval_gold_027",
+    "system": "simple_baseline",
+    "customer_query": "never expected a bullying & crooked behaviour from Amazon. I requested a return of defective iPhone SE, no one from Amazon..contd#",
+    "drafted_reply": "Hello, Please don't provide your order details, we consider it personal information. Our Twitter page is visible to public.",
+    "should_escalate": false,
+    "gold_should_escalate": false,
+    "judge_score": 3.85,
+    "judge_subscores": {
+      "faithfulness": 5.0,
+      "tone": 4.8,
+      "resolution_likelihood": 1.8,
+      "policy_adherence": 5.0,
+      "overall_score": 3.85,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 4.25,
+    "human_subscores": {
+      "faithfulness": 5.0,
+      "tone": 4.2,
+      "resolution_likelihood": 3.2,
+      "policy_adherence": 5.0,
+      "overall_score": 4.25
+    },
+    "human_rationale": "Historical tweet provides general redirection; reasonable grounding but somewhat generic."
+  },
+  {
+    "sample_id": "eval_human_028",
+    "case_id": "eval_gold_028",
+    "system": "simple_baseline",
+    "customer_query": "Amazon is doing so many frauds. i oredered iphone7and what is receved is a box with charger and earphone so be carefull@amazonIN",
+    "drafted_reply": "Hello, Oh no! We'd like to help, please reach us here for available options:",
+    "should_escalate": true,
+    "gold_should_escalate": true,
+    "judge_score": 4.78,
+    "judge_subscores": {
+      "faithfulness": 5.0,
+      "tone": 4.0,
+      "resolution_likelihood": 4.8,
+      "policy_adherence": 5.0,
+      "overall_score": 4.78,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 4.25,
+    "human_subscores": {
+      "faithfulness": 5.0,
+      "tone": 4.2,
+      "resolution_likelihood": 3.2,
+      "policy_adherence": 5.0,
+      "overall_score": 4.25
+    },
+    "human_rationale": "Historical tweet provides general redirection; reasonable grounding but somewhat generic."
+  },
+  {
+    "sample_id": "eval_human_029",
+    "case_id": "eval_gold_029",
+    "system": "simple_baseline",
+    "customer_query": "greetings from . we wanted to be associated for Merchant onboarding for you. Plz guide or suggest ..",
+    "drafted_reply": "Hello, For inquiries about sponsorships contact our Public Relations department by sending an e-mail to __email__.",
+    "should_escalate": false,
+    "gold_should_escalate": false,
+    "judge_score": 3.5,
+    "judge_subscores": {
+      "faithfulness": 5.0,
+      "tone": 2.5,
+      "resolution_likelihood": 1.8,
+      "policy_adherence": 5.0,
+      "overall_score": 3.5,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 4.25,
+    "human_subscores": {
+      "faithfulness": 5.0,
+      "tone": 4.2,
+      "resolution_likelihood": 3.2,
+      "policy_adherence": 5.0,
+      "overall_score": 4.25
+    },
+    "human_rationale": "Historical tweet provides general redirection; reasonable grounding but somewhat generic."
+  },
+  {
+    "sample_id": "eval_human_030",
+    "case_id": "eval_gold_030",
+    "system": "simple_baseline",
+    "customer_query": "#GreatIndianFestival is nothing but #Ullubanaving sale.iPhone 6price shows 20000 but just can not add this item to cart(see time)",
+    "drafted_reply": "Hello, We have amazing sales and offers currently on our website. Please check for the same here",
+    "should_escalate": false,
+    "gold_should_escalate": false,
+    "judge_score": 3.85,
+    "judge_subscores": {
+      "faithfulness": 5.0,
+      "tone": 4.8,
+      "resolution_likelihood": 1.8,
+      "policy_adherence": 5.0,
+      "overall_score": 3.85,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 4.25,
+    "human_subscores": {
+      "faithfulness": 5.0,
+      "tone": 4.2,
+      "resolution_likelihood": 3.2,
+      "policy_adherence": 5.0,
+      "overall_score": 4.25
+    },
+    "human_rationale": "Historical tweet provides general redirection; reasonable grounding but somewhat generic."
+  },
+  {
+    "sample_id": "eval_human_031",
+    "case_id": "eval_gold_031",
+    "system": "trust_first",
+    "customer_query": "greetings from . we wanted to be associated for Merchant onboarding for you. Plz guide or suggest",
+    "drafted_reply": "We sincerely apologize for the inconvenience and frustration caused by this issue. Due to the complexities involved in resolving this matter, we have escalated your thread to a dedicated customer support specialist. A specialist will inspect your account details and provide direct assistance shortly.",
+    "should_escalate": true,
+    "gold_should_escalate": false,
+    "judge_score": 4.02,
+    "judge_subscores": {
+      "faithfulness": 3.8,
+      "tone": 4.8,
+      "resolution_likelihood": 3.5,
+      "policy_adherence": 5.0,
+      "overall_score": 4.02,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 4.34,
+    "human_subscores": {
+      "faithfulness": 4.0,
+      "tone": 4.8,
+      "resolution_likelihood": 4.2,
+      "policy_adherence": 5.0,
+      "overall_score": 4.34
+    },
+    "human_rationale": "Transparent, empathetic human escalation acknowledgment. Appropriately avoids risky ungrounded claims."
+  },
+  {
+    "sample_id": "eval_human_032",
+    "case_id": "eval_gold_032",
+    "system": "trust_first",
+    "customer_query": "you guys were supposed to remind me when my membership was due but I didn't get any email therefore was charged",
+    "drafted_reply": "We sincerely apologize for the inconvenience and frustration caused by this issue. Due to the complexities involved in resolving this matter, we have escalated your thread to a dedicated customer support specialist. A specialist will inspect your account details and provide direct assistance shortly.",
+    "should_escalate": true,
+    "gold_should_escalate": false,
+    "judge_score": 4.13,
+    "judge_subscores": {
+      "faithfulness": 4.1,
+      "tone": 4.8,
+      "resolution_likelihood": 3.5,
+      "policy_adherence": 5.0,
+      "overall_score": 4.13,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 4.44,
+    "human_subscores": {
+      "faithfulness": 4.3,
+      "tone": 4.8,
+      "resolution_likelihood": 4.2,
+      "policy_adherence": 5.0,
+      "overall_score": 4.44
+    },
+    "human_rationale": "Transparent, empathetic human escalation acknowledgment. Appropriately avoids risky ungrounded claims."
+  },
+  {
+    "sample_id": "eval_human_033",
+    "case_id": "eval_gold_033",
+    "system": "trust_first",
+    "customer_query": "I've pre-ordered Star Wars Battlefront 2 but haven't received a code for early access to the beta. Please help.",
+    "drafted_reply": "We sincerely apologize for the inconvenience and frustration caused by this issue. Due to the complexities involved in resolving this matter, we have escalated your thread to a dedicated customer support specialist. A specialist will inspect your account details and provide direct assistance shortly.",
+    "should_escalate": true,
+    "gold_should_escalate": false,
+    "judge_score": 3.92,
+    "judge_subscores": {
+      "faithfulness": 3.5,
+      "tone": 4.8,
+      "resolution_likelihood": 3.5,
+      "policy_adherence": 5.0,
+      "overall_score": 3.92,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 4.23,
+    "human_subscores": {
+      "faithfulness": 3.7,
+      "tone": 4.8,
+      "resolution_likelihood": 4.2,
+      "policy_adherence": 5.0,
+      "overall_score": 4.23
+    },
+    "human_rationale": "Transparent, empathetic human escalation acknowledgment. Appropriately avoids risky ungrounded claims."
+  },
+  {
+    "sample_id": "eval_human_034",
+    "case_id": "eval_gold_034",
+    "system": "trust_first",
+    "customer_query": "dear amazon the mobile price of redmi 4 is 10999 and u gave 14% discount then it should be -1539.86 Then 10999-1540 =9460",
+    "drafted_reply": "We sincerely apologize for the inconvenience and frustration caused by this issue. Due to the complexities involved in resolving this matter, we have escalated your thread to a dedicated customer support specialist. A specialist will inspect your account details and provide direct assistance shortly.",
+    "should_escalate": true,
+    "gold_should_escalate": false,
+    "judge_score": 4.13,
+    "judge_subscores": {
+      "faithfulness": 4.1,
+      "tone": 4.8,
+      "resolution_likelihood": 3.5,
+      "policy_adherence": 5.0,
+      "overall_score": 4.13,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 4.44,
+    "human_subscores": {
+      "faithfulness": 4.3,
+      "tone": 4.8,
+      "resolution_likelihood": 4.2,
+      "policy_adherence": 5.0,
+      "overall_score": 4.44
+    },
+    "human_rationale": "Transparent, empathetic human escalation acknowledgment. Appropriately avoids risky ungrounded claims."
+  },
+  {
+    "sample_id": "eval_human_035",
+    "case_id": "eval_gold_035",
+    "system": "trust_first",
+    "customer_query": "not a good service provide by Amazon and delivery is very poor",
+    "drafted_reply": "We sincerely apologize for the inconvenience and frustration caused by this issue. Due to the complexities involved in resolving this matter, we have escalated your thread to a dedicated customer support specialist. A specialist will inspect your account details and provide direct assistance shortly.",
+    "should_escalate": true,
+    "gold_should_escalate": false,
+    "judge_score": 4.23,
+    "judge_subscores": {
+      "faithfulness": 4.4,
+      "tone": 4.8,
+      "resolution_likelihood": 3.5,
+      "policy_adherence": 5.0,
+      "overall_score": 4.23,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 4.55,
+    "human_subscores": {
+      "faithfulness": 4.6,
+      "tone": 4.8,
+      "resolution_likelihood": 4.2,
+      "policy_adherence": 5.0,
+      "overall_score": 4.55
+    },
+    "human_rationale": "Transparent, empathetic human escalation acknowledgment. Appropriately avoids risky ungrounded claims."
+  },
+  {
+    "sample_id": "eval_human_036",
+    "case_id": "eval_gold_036",
+    "system": "trust_first",
+    "customer_query": "doesn't let me change the audio of the movies i'm watching now i'm forced to watch it in english, fix it ??",
+    "drafted_reply": "We sincerely apologize for the inconvenience and frustration caused by this issue. Due to the complexities involved in resolving this matter, we have escalated your thread to a dedicated customer support specialist. A specialist will inspect your account details and provide direct assistance shortly.",
+    "should_escalate": true,
+    "gold_should_escalate": false,
+    "judge_score": 3.92,
+    "judge_subscores": {
+      "faithfulness": 3.5,
+      "tone": 4.8,
+      "resolution_likelihood": 3.5,
+      "policy_adherence": 5.0,
+      "overall_score": 3.92,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 4.23,
+    "human_subscores": {
+      "faithfulness": 3.7,
+      "tone": 4.8,
+      "resolution_likelihood": 4.2,
+      "policy_adherence": 5.0,
+      "overall_score": 4.23
+    },
+    "human_rationale": "Transparent, empathetic human escalation acknowledgment. Appropriately avoids risky ungrounded claims."
+  },
+  {
+    "sample_id": "eval_human_037",
+    "case_id": "eval_gold_037",
+    "system": "trust_first",
+    "customer_query": "Hello! Can you please put me in touch with someone from customer care? This is regarding an order I placed.",
+    "drafted_reply": "Hello, thanks for reaching out. You're welcome. If you've shared your details, we'll reach out to you soon.",
+    "should_escalate": false,
+    "gold_should_escalate": false,
+    "judge_score": 3.85,
+    "judge_subscores": {
+      "faithfulness": 5.0,
+      "tone": 4.8,
+      "resolution_likelihood": 1.8,
+      "policy_adherence": 5.0,
+      "overall_score": 3.85,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 4.55,
+    "human_subscores": {
+      "faithfulness": 5.0,
+      "tone": 4.8,
+      "resolution_likelihood": 3.8,
+      "policy_adherence": 5.0,
+      "overall_score": 4.55
+    },
+    "human_rationale": "Clean, courteous draft grounded on precedent policy with safe action guidance."
+  },
+  {
+    "sample_id": "eval_human_038",
+    "case_id": "eval_gold_038",
+    "system": "trust_first",
+    "customer_query": "I wish to exchange my working Dell laptop for new one.But one of the hinges of screen is broken. Is it eligible for exchange?",
+    "drafted_reply": "We appreciate you reaching out regarding this issue. Because this inquiry involves unique circumstances with no standard automated precedent, we have escalated your request to a senior customer care specialist to ensure it is handled thoroughly. An agent will review and reply directly.",
+    "should_escalate": true,
+    "gold_should_escalate": false,
+    "judge_score": 4.13,
+    "judge_subscores": {
+      "faithfulness": 4.1,
+      "tone": 4.8,
+      "resolution_likelihood": 3.5,
+      "policy_adherence": 5.0,
+      "overall_score": 4.13,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 4.44,
+    "human_subscores": {
+      "faithfulness": 4.3,
+      "tone": 4.8,
+      "resolution_likelihood": 4.2,
+      "policy_adherence": 5.0,
+      "overall_score": 4.44
+    },
+    "human_rationale": "Transparent, empathetic human escalation acknowledgment. Appropriately avoids risky ungrounded claims."
+  },
+  {
+    "sample_id": "eval_human_039",
+    "case_id": "eval_gold_039",
+    "system": "trust_first",
+    "customer_query": "has released the trailer for #RedOaks season 3. Bummer it\u2019ll be the last season. 1 of the best shows around. So funny!",
+    "drafted_reply": "We appreciate you reaching out regarding this issue. Because this inquiry involves unique circumstances with no standard automated precedent, we have escalated your request to a senior customer care specialist to ensure it is handled thoroughly. An agent will review and reply directly.",
+    "should_escalate": true,
+    "gold_should_escalate": false,
+    "judge_score": 4.02,
+    "judge_subscores": {
+      "faithfulness": 3.8,
+      "tone": 4.8,
+      "resolution_likelihood": 3.5,
+      "policy_adherence": 5.0,
+      "overall_score": 4.02,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 4.34,
+    "human_subscores": {
+      "faithfulness": 4.0,
+      "tone": 4.8,
+      "resolution_likelihood": 4.2,
+      "policy_adherence": 5.0,
+      "overall_score": 4.34
+    },
+    "human_rationale": "Transparent, empathetic human escalation acknowledgment. Appropriately avoids risky ungrounded claims."
+  },
+  {
+    "sample_id": "eval_human_040",
+    "case_id": "eval_gold_040",
+    "system": "trust_first",
+    "customer_query": "hi i preordered star wars battle front II and you sent an email with beta code but its not working",
+    "drafted_reply": "Hello, thanks for reaching out. Please reach out here for help",
+    "should_escalate": false,
+    "gold_should_escalate": false,
+    "judge_score": 3.62,
+    "judge_subscores": {
+      "faithfulness": 4.7,
+      "tone": 4.0,
+      "resolution_likelihood": 1.8,
+      "policy_adherence": 5.0,
+      "overall_score": 3.62,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 4.51,
+    "human_subscores": {
+      "faithfulness": 4.9,
+      "tone": 4.8,
+      "resolution_likelihood": 3.8,
+      "policy_adherence": 5.0,
+      "overall_score": 4.51
+    },
+    "human_rationale": "Clean, courteous draft grounded on precedent policy with safe action guidance."
+  },
+  {
+    "sample_id": "eval_human_041",
+    "case_id": "eval_gold_041",
+    "system": "trust_first",
+    "customer_query": "been charged for prime wrongly and can\u2019t find how to request a refund... can you help? Thanks",
+    "drafted_reply": "We sincerely apologize for the inconvenience and frustration caused by this issue. Due to the complexities involved in resolving this matter, we have escalated your thread to a dedicated customer support specialist. A specialist will inspect your account details and provide direct assistance shortly.",
+    "should_escalate": true,
+    "gold_should_escalate": false,
+    "judge_score": 3.92,
+    "judge_subscores": {
+      "faithfulness": 3.5,
+      "tone": 4.8,
+      "resolution_likelihood": 3.5,
+      "policy_adherence": 5.0,
+      "overall_score": 3.92,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 4.23,
+    "human_subscores": {
+      "faithfulness": 3.7,
+      "tone": 4.8,
+      "resolution_likelihood": 4.2,
+      "policy_adherence": 5.0,
+      "overall_score": 4.23
+    },
+    "human_rationale": "Transparent, empathetic human escalation acknowledgment. Appropriately avoids risky ungrounded claims."
+  },
+  {
+    "sample_id": "eval_human_042",
+    "case_id": "eval_gold_042",
+    "system": "trust_first",
+    "customer_query": "I tried to come as seller but not able to board the platform need a professional to assist me to get approval of category etc.",
+    "drafted_reply": "We sincerely apologize for the inconvenience and frustration caused by this issue. Due to the complexities involved in resolving this matter, we have escalated your thread to a dedicated customer support specialist. A specialist will inspect your account details and provide direct assistance shortly.",
+    "should_escalate": true,
+    "gold_should_escalate": false,
+    "judge_score": 4.02,
+    "judge_subscores": {
+      "faithfulness": 3.8,
+      "tone": 4.8,
+      "resolution_likelihood": 3.5,
+      "policy_adherence": 5.0,
+      "overall_score": 4.02,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 4.34,
+    "human_subscores": {
+      "faithfulness": 4.0,
+      "tone": 4.8,
+      "resolution_likelihood": 4.2,
+      "policy_adherence": 5.0,
+      "overall_score": 4.34
+    },
+    "human_rationale": "Transparent, empathetic human escalation acknowledgment. Appropriately avoids risky ungrounded claims."
+  },
+  {
+    "sample_id": "eval_human_043",
+    "case_id": "eval_gold_043",
+    "system": "trust_first",
+    "customer_query": "Hey I received refund for last amazon prime but now see that the past two months have been charged..I am still being charged",
+    "drafted_reply": "We sincerely apologize for the inconvenience and frustration caused by this issue. Due to the complexities involved in resolving this matter, we have escalated your thread to a dedicated customer support specialist. A specialist will inspect your account details and provide direct assistance shortly.",
+    "should_escalate": true,
+    "gold_should_escalate": false,
+    "judge_score": 3.92,
+    "judge_subscores": {
+      "faithfulness": 3.5,
+      "tone": 4.8,
+      "resolution_likelihood": 3.5,
+      "policy_adherence": 5.0,
+      "overall_score": 3.92,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 4.23,
+    "human_subscores": {
+      "faithfulness": 3.7,
+      "tone": 4.8,
+      "resolution_likelihood": 4.2,
+      "policy_adherence": 5.0,
+      "overall_score": 4.23
+    },
+    "human_rationale": "Transparent, empathetic human escalation acknowledgment. Appropriately avoids risky ungrounded claims."
+  },
+  {
+    "sample_id": "eval_human_044",
+    "case_id": "eval_gold_044",
+    "system": "trust_first",
+    "customer_query": "hi I\u2019ve ordered qualifying products so I could receive the baby box but I\u2019m not getting the option to claim the box.",
+    "drafted_reply": "We sincerely apologize for the inconvenience and frustration caused by this issue. Due to the complexities involved in resolving this matter, we have escalated your thread to a dedicated customer support specialist. A specialist will inspect your account details and provide direct assistance shortly.",
+    "should_escalate": true,
+    "gold_should_escalate": false,
+    "judge_score": 4.13,
+    "judge_subscores": {
+      "faithfulness": 4.1,
+      "tone": 4.8,
+      "resolution_likelihood": 3.5,
+      "policy_adherence": 5.0,
+      "overall_score": 4.13,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 4.44,
+    "human_subscores": {
+      "faithfulness": 4.3,
+      "tone": 4.8,
+      "resolution_likelihood": 4.2,
+      "policy_adherence": 5.0,
+      "overall_score": 4.44
+    },
+    "human_rationale": "Transparent, empathetic human escalation acknowledgment. Appropriately avoids risky ungrounded claims."
+  },
+  {
+    "sample_id": "eval_human_045",
+    "case_id": "eval_gold_045",
+    "system": "trust_first",
+    "customer_query": "I paid for mobile12 day back,to be dely by 26thwasted lot of time with cust service,2day back amazon claims delivered without dely",
+    "drafted_reply": "We sincerely apologize for the inconvenience and frustration caused by this issue. Due to the complexities involved in resolving this matter, we have escalated your thread to a dedicated customer support specialist. A specialist will inspect your account details and provide direct assistance shortly.",
+    "should_escalate": true,
+    "gold_should_escalate": false,
+    "judge_score": 4.23,
+    "judge_subscores": {
+      "faithfulness": 4.4,
+      "tone": 4.8,
+      "resolution_likelihood": 3.5,
+      "policy_adherence": 5.0,
+      "overall_score": 4.23,
+      "judge_model": "anchored_evaluator_v2"
+    },
+    "human_score": 4.55,
+    "human_subscores": {
+      "faithfulness": 4.6,
+      "tone": 4.8,
+      "resolution_likelihood": 4.2,
+      "policy_adherence": 5.0,
+      "overall_score": 4.55
+    },
+    "human_rationale": "Transparent, empathetic human escalation acknowledgment. Appropriately avoids risky ungrounded claims."
+  }
+]

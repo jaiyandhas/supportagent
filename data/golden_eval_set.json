@@ -3,13 +3,15 @@
     "id": "eval_gold_001",
     "conversation_id": "831f5a5e2738f57b79da677d92e60222",
     "customer_query": "I ordered on July 25th. I still do not receive anything and you already charged me. It doesn't let me cancel. Unacceptable. \ud83d\ude21\ud83d\ude21\ud83d\ude21",
-    "true_coarse_intent": "order_delivery",
-    "true_sub_intent": "tracking_status_eta",
-    "gold_should_escalate": false,
-    "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
+    "true_coarse_intent": "payments_refunds",
+    "true_sub_intent": "refund_status_delay",
+    "gold_should_escalate": true,
+    "gold_escalation_reason": "Customer charged for unreceived order and unable to cancel; requires billing verification and manual intervention.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": true,
+    "author_annotated": true,
+    "annotation_notes": "Author manual review pass: adjusted intent and escalation label based on conversation context."
   },
   {
     "id": "eval_gold_002",
@@ -21,19 +23,22 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_003",
     "conversation_id": "537a6bf2e6a0460cafcf2527b3c5578c",
     "customer_query": "#Order canceled by Amazon India, complaint filed against #Amazon",
     "true_coarse_intent": "order_delivery",
-    "true_sub_intent": "tracking_status_eta",
-    "gold_should_escalate": false,
-    "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
+    "true_sub_intent": "damaged_or_missing_items",
+    "gold_should_escalate": true,
+    "gold_escalation_reason": "Official complaint filed against cancelled order; safety and customer retention escalation required.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true,
+    "annotation_notes": "Author manual review pass: adjusted intent and escalation label based on conversation context."
   },
   {
     "id": "eval_gold_004",
@@ -45,7 +50,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_005",
@@ -57,7 +63,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_006",
@@ -69,7 +76,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_007",
@@ -81,7 +89,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_008",
@@ -93,7 +102,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_009",
@@ -105,7 +115,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_010",
@@ -117,7 +128,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for refund_status_delay. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_011",
@@ -129,19 +141,22 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_012",
     "conversation_id": "5703de3548ff252d497ed77119eccccf",
     "customer_query": "hello, i am having trouble getting in contact with someone about an issue with a return due to an amazon locker, please help!",
     "true_coarse_intent": "order_delivery",
-    "true_sub_intent": "tracking_status_eta",
-    "gold_should_escalate": false,
-    "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
+    "true_sub_intent": "damaged_or_missing_items",
+    "gold_should_escalate": true,
+    "gold_escalation_reason": "Locker return drop-off malfunction preventing return completion; physical locker/OMS lookup required.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true,
+    "annotation_notes": "Author manual review pass: adjusted intent and escalation label based on conversation context."
   },
   {
     "id": "eval_gold_013",
@@ -153,7 +168,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_014",
@@ -165,7 +181,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_015",
@@ -177,7 +194,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_016",
@@ -189,7 +207,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for damaged_or_missing_items. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_017",
@@ -201,7 +220,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_018",
@@ -213,7 +233,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_019",
@@ -225,7 +246,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_020",
@@ -237,7 +259,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_021",
@@ -249,7 +272,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_022",
@@ -261,7 +285,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_023",
@@ -273,7 +298,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_024",
@@ -285,7 +311,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_025",
@@ -297,7 +324,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_026",
@@ -309,7 +337,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_027",
@@ -321,19 +350,22 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_028",
     "conversation_id": "e002053e617cb421a0e25a2908e89ccc",
     "customer_query": "Amazon is doing so many frauds. i oredered iphone7and what is receved is a box with charger and earphone so be carefull@amazonIN",
-    "true_coarse_intent": "order_delivery",
-    "true_sub_intent": "tracking_status_eta",
-    "gold_should_escalate": false,
-    "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
+    "true_coarse_intent": "abuse_safety",
+    "true_sub_intent": "phishing_scam_report",
+    "gold_should_escalate": true,
+    "gold_escalation_reason": "High-value fraud/tampered package (iPhone received with only charger/earphones); mandatory investigation.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true,
+    "annotation_notes": "Author manual review pass: adjusted intent and escalation label based on conversation context."
   },
   {
     "id": "eval_gold_029",
@@ -345,7 +377,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_030",
@@ -357,7 +390,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_031",
@@ -369,7 +403,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_032",
@@ -381,7 +416,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_033",
@@ -393,7 +429,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_034",
@@ -405,7 +442,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_035",
@@ -417,7 +455,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_036",
@@ -429,7 +468,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for digital_content_kindle_video. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_037",
@@ -441,7 +481,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_038",
@@ -453,7 +494,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for damaged_or_missing_items. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_039",
@@ -465,7 +507,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_040",
@@ -477,7 +520,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_041",
@@ -489,7 +533,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for refund_status_delay. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_042",
@@ -501,7 +546,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_043",
@@ -513,7 +559,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for refund_status_delay. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_044",
@@ -525,7 +572,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_045",
@@ -537,7 +585,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_046",
@@ -549,7 +598,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for refund_status_delay. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_047",
@@ -561,7 +611,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_048",
@@ -573,7 +624,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_049",
@@ -585,19 +637,22 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_050",
     "conversation_id": "3ca9a57dcdd473e70727592978a39e63",
     "customer_query": "WHY when only asking about my order #SNESCLASSIC did customer service proceed to cancel the first order I used employee discount on.",
     "true_coarse_intent": "order_delivery",
-    "true_sub_intent": "tracking_status_eta",
-    "gold_should_escalate": false,
-    "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
+    "true_sub_intent": "damaged_or_missing_items",
+    "gold_should_escalate": true,
+    "gold_escalation_reason": "Customer service cancelled order with employee discount in error; supervisor dispute escalation.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true,
+    "annotation_notes": "Author manual review pass: adjusted intent and escalation label based on conversation context."
   },
   {
     "id": "eval_gold_051",
@@ -609,19 +664,22 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_052",
     "conversation_id": "5dd2df14c41b7a1408cedb816bed73ba",
     "customer_query": "@XboxSupport - can one of you assist me with the BETA issue for star wars!! your all blaming each other",
-    "true_coarse_intent": "order_delivery",
-    "true_sub_intent": "tracking_status_eta",
-    "gold_should_escalate": false,
-    "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
+    "true_coarse_intent": "product_digital",
+    "true_sub_intent": "digital_content_kindle_video",
+    "gold_should_escalate": true,
+    "gold_escalation_reason": "Third-party vendor dispute (Xbox Support / EA beta code); requires tier-2 digital games partner coordination.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true,
+    "annotation_notes": "Author manual review pass: adjusted intent and escalation label based on conversation context."
   },
   {
     "id": "eval_gold_053",
@@ -633,7 +691,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_054",
@@ -645,7 +704,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_055",
@@ -657,7 +717,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_056",
@@ -669,7 +730,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_057",
@@ -681,7 +743,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_058",
@@ -693,19 +756,22 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_059",
     "conversation_id": "cb0cc8dbf660a3d3f2abe84d527bfe3f",
     "customer_query": "Had to cancel my order today from 2 day shipping item still not shipped, horrible experience with the CSR.",
-    "true_coarse_intent": "order_delivery",
-    "true_sub_intent": "tracking_status_eta",
-    "gold_should_escalate": false,
-    "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
+    "true_coarse_intent": "payments_refunds",
+    "true_sub_intent": "refund_status_delay",
+    "gold_should_escalate": true,
+    "gold_escalation_reason": "Escalated cancellation due to missed 2-day Prime SLA and negative CSR interaction.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true,
+    "annotation_notes": "Author manual review pass: adjusted intent and escalation label based on conversation context."
   },
   {
     "id": "eval_gold_060",
@@ -717,7 +783,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for damaged_or_missing_items. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_061",
@@ -729,7 +796,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_062",
@@ -741,7 +809,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_063",
@@ -753,7 +822,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for digital_content_kindle_video. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_064",
@@ -765,7 +835,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_065",
@@ -777,7 +848,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_066",
@@ -789,7 +861,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for refund_status_delay. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_067",
@@ -801,7 +874,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_068",
@@ -813,7 +887,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_069",
@@ -825,7 +900,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_070",
@@ -837,7 +913,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_071",
@@ -849,7 +926,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_072",
@@ -857,11 +935,13 @@
     "customer_query": "I'm facing issue linking my kindle edition to print version. In spite of many emails, it's not getting resolved. What can I do?",
     "true_coarse_intent": "product_digital",
     "true_sub_intent": "digital_content_kindle_video",
-    "gold_should_escalate": false,
-    "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
+    "gold_should_escalate": true,
+    "gold_escalation_reason": "Persistent unresolved digital book linkage after repeated email attempts; tier-2 technical escalation.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for digital_content_kindle_video. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true,
+    "annotation_notes": "Author manual review pass: adjusted intent and escalation label based on conversation context."
   },
   {
     "id": "eval_gold_073",
@@ -873,7 +953,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for digital_content_kindle_video. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_074",
@@ -885,7 +966,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_075",
@@ -897,7 +979,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_076",
@@ -909,7 +992,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_077",
@@ -921,7 +1005,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_078",
@@ -933,7 +1018,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_079",
@@ -945,7 +1031,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_080",
@@ -957,7 +1044,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_081",
@@ -969,7 +1057,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for refund_status_delay. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_082",
@@ -981,7 +1070,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for refund_status_delay. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_083",
@@ -993,7 +1083,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_084",
@@ -1005,7 +1096,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_085",
@@ -1017,7 +1109,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for refund_status_delay. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_086",
@@ -1029,7 +1122,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for refund_status_delay. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_087",
@@ -1041,31 +1135,36 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_088",
     "conversation_id": "785edec6241305b0ae61ce447d7ccd1f",
     "customer_query": "Gran's order has been cancelled twice. It's limited item, but keep explaining I bought three on my account & 3 on her new account.",
     "true_coarse_intent": "order_delivery",
-    "true_sub_intent": "tracking_status_eta",
-    "gold_should_escalate": false,
-    "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
+    "true_sub_intent": "damaged_or_missing_items",
+    "gold_should_escalate": true,
+    "gold_escalation_reason": "Repeated cancellation of limited item due to suspected quantity limit / multi-account flag; human review needed.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true,
+    "annotation_notes": "Author manual review pass: adjusted intent and escalation label based on conversation context."
   },
   {
     "id": "eval_gold_089",
     "conversation_id": "8bb6023cf5bbc8fce7e65c1932729626",
     "customer_query": "the inability to get a straight answer from your support team dumbfounds me. Constant lies & half truths #COMPLAINT #pissedoff",
-    "true_coarse_intent": "order_delivery",
-    "true_sub_intent": "tracking_status_eta",
-    "gold_should_escalate": false,
-    "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
+    "true_coarse_intent": "abuse_safety",
+    "true_sub_intent": "harassment_threatening_conduct",
+    "gold_should_escalate": true,
+    "gold_escalation_reason": "Explicit complaint hashtagging and accusation of deceptive support conduct; requires senior agent intervention.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true,
+    "annotation_notes": "Author manual review pass: adjusted intent and escalation label based on conversation context."
   },
   {
     "id": "eval_gold_090",
@@ -1077,7 +1176,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_091",
@@ -1089,7 +1189,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_092",
@@ -1101,7 +1202,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_093",
@@ -1113,7 +1215,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_094",
@@ -1125,7 +1228,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_095",
@@ -1137,7 +1241,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_096",
@@ -1149,7 +1254,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_097",
@@ -1161,7 +1267,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_098",
@@ -1173,7 +1280,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_099",
@@ -1185,7 +1293,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_100",
@@ -1197,7 +1306,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_101",
@@ -1209,7 +1319,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_102",
@@ -1221,7 +1332,8 @@
     "gold_escalation_reason": "Hard safety override triggered: account_access category poses security/compliance liability.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for compromised_account_hijack. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_103",
@@ -1233,7 +1345,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_104",
@@ -1245,7 +1358,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_105",
@@ -1257,7 +1371,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for refund_status_delay. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_106",
@@ -1269,7 +1384,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_107",
@@ -1281,7 +1397,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_108",
@@ -1293,7 +1410,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for refund_status_delay. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_109",
@@ -1305,7 +1423,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_110",
@@ -1317,7 +1436,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_111",
@@ -1329,7 +1449,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_112",
@@ -1341,7 +1462,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_113",
@@ -1353,7 +1475,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_114",
@@ -1365,7 +1488,8 @@
     "gold_escalation_reason": "Low historical resolution precedent for complex customer dispute.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_115",
@@ -1377,7 +1501,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_116",
@@ -1389,7 +1514,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for refund_status_delay. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_117",
@@ -1401,7 +1527,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_118",
@@ -1413,7 +1540,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_119",
@@ -1425,7 +1553,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_120",
@@ -1437,7 +1566,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_121",
@@ -1449,7 +1579,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for refund_status_delay. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_122",
@@ -1461,7 +1592,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_123",
@@ -1473,7 +1605,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_124",
@@ -1485,7 +1618,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_125",
@@ -1497,7 +1631,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_126",
@@ -1509,7 +1644,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_127",
@@ -1521,7 +1657,8 @@
     "gold_escalation_reason": "Low historical resolution precedent for complex customer dispute.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_128",
@@ -1533,7 +1670,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_129",
@@ -1545,7 +1683,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_130",
@@ -1557,7 +1696,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for digital_content_kindle_video. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_131",
@@ -1569,7 +1709,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_132",
@@ -1581,7 +1722,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for refund_status_delay. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_133",
@@ -1593,7 +1735,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_134",
@@ -1605,7 +1748,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_135",
@@ -1617,7 +1761,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_136",
@@ -1629,7 +1774,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_137",
@@ -1641,7 +1787,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for refund_status_delay. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_138",
@@ -1653,7 +1800,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_139",
@@ -1665,7 +1813,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for refund_status_delay. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_140",
@@ -1677,7 +1826,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_141",
@@ -1689,7 +1839,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for refund_status_delay. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_142",
@@ -1701,7 +1852,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_143",
@@ -1713,7 +1865,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_144",
@@ -1725,7 +1878,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_145",
@@ -1737,7 +1891,8 @@
     "gold_escalation_reason": "Standard automatable fulfillment/service inquiry with high resolution precedent.",
     "reference_reply_guidelines": "Ground on AmazonHelp policy for tracking_status_eta. Tone: empathetic, concise, no hallucinated promises.",
     "is_cold_case": false,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_146",
@@ -1748,7 +1903,8 @@
     "gold_escalation_reason": "Multi-intent dispute involving physical damage and disputed billing charges.",
     "reference_reply_guidelines": "Address primary dispute: damaged_or_missing_items. Clear routing guidance.",
     "is_cold_case": false,
-    "is_borderline": true
+    "is_borderline": true,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_147",
@@ -1759,7 +1915,8 @@
     "gold_escalation_reason": "High-value theft allegation requiring carrier fraud investigation.",
     "reference_reply_guidelines": "Address primary dispute: damaged_or_missing_items. Clear routing guidance.",
     "is_cold_case": false,
-    "is_borderline": true
+    "is_borderline": true,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_148",
@@ -1770,7 +1927,8 @@
     "gold_escalation_reason": "Standard post-cancellation Prime refund eligibility within 3-day grace window.",
     "reference_reply_guidelines": "Address primary dispute: prime_membership_billing. Clear routing guidance.",
     "is_cold_case": false,
-    "is_borderline": true
+    "is_borderline": true,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_149",
@@ -1781,7 +1939,8 @@
     "gold_escalation_reason": "Impossible delivery confirmation indicating carrier misroute or fraudulent scan.",
     "reference_reply_guidelines": "Address primary dispute: tracking_status_eta. Clear routing guidance.",
     "is_cold_case": false,
-    "is_borderline": true
+    "is_borderline": true,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_150",
@@ -1792,7 +1951,8 @@
     "gold_escalation_reason": "Severe multi-platform account compromise and unauthorized financial transactions.",
     "reference_reply_guidelines": "Address primary dispute: compromised_account_hijack. Clear routing guidance.",
     "is_cold_case": false,
-    "is_borderline": true
+    "is_borderline": true,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_151",
@@ -1803,7 +1963,8 @@
     "gold_escalation_reason": "Threatening on-site driver conduct posing physical safety and brand liability.",
     "reference_reply_guidelines": "Address primary dispute: harassment_threatening_conduct. Clear routing guidance.",
     "is_cold_case": false,
-    "is_borderline": true
+    "is_borderline": true,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_152",
@@ -1814,7 +1975,8 @@
     "gold_escalation_reason": "Refund timeline exceeded banking SLA window; requires ARN/RRN transaction trace.",
     "reference_reply_guidelines": "Address primary dispute: refund_status_delay. Clear routing guidance.",
     "is_cold_case": false,
-    "is_borderline": true
+    "is_borderline": true,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_153",
@@ -1825,7 +1987,8 @@
     "gold_escalation_reason": "Critical urgency fulfillment delay requiring proactive expedited replacement.",
     "reference_reply_guidelines": "Address primary dispute: tracking_status_eta. Clear routing guidance.",
     "is_cold_case": false,
-    "is_borderline": true
+    "is_borderline": true,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_154",
@@ -1836,7 +1999,8 @@
     "gold_escalation_reason": "Phishing credential harvesting attempt impersonating brand.",
     "reference_reply_guidelines": "Address primary dispute: phishing_scam_report. Clear routing guidance.",
     "is_cold_case": false,
-    "is_borderline": true
+    "is_borderline": true,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_155",
@@ -1847,7 +2011,8 @@
     "gold_escalation_reason": "Standard address update / carrier redirect guidance before final dispatch.",
     "reference_reply_guidelines": "Address primary dispute: tracking_status_eta. Clear routing guidance.",
     "is_cold_case": false,
-    "is_borderline": true
+    "is_borderline": true,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_156",
@@ -1858,7 +2023,8 @@
     "gold_escalation_reason": "Cold case: B2B enterprise AWS developer inquiry out of retail consumer support scope.",
     "reference_reply_guidelines": "Cold case override: escalate immediately to human specialist.",
     "is_cold_case": true,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_157",
@@ -1869,7 +2035,8 @@
     "gold_escalation_reason": "Cold case: Novel autonomous drone delivery property damage claim with zero historical precedent.",
     "reference_reply_guidelines": "Cold case override: escalate immediately to human specialist.",
     "is_cold_case": true,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_158",
@@ -1880,7 +2047,8 @@
     "gold_escalation_reason": "Cold case: Unsupported cryptocurrency payment inquiry outside standard payment rails.",
     "reference_reply_guidelines": "Cold case override: escalate immediately to human specialist.",
     "is_cold_case": true,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_159",
@@ -1891,7 +2059,8 @@
     "gold_escalation_reason": "Cold case: Specialized B2B institutional tax exemption compliance review.",
     "reference_reply_guidelines": "Cold case override: escalate immediately to human specialist.",
     "is_cold_case": true,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_160",
@@ -1902,7 +2071,8 @@
     "gold_escalation_reason": "Cold case: Commercial fleet physical property damage liability claim.",
     "reference_reply_guidelines": "Cold case override: escalate immediately to human specialist.",
     "is_cold_case": true,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_161",
@@ -1913,7 +2083,8 @@
     "gold_escalation_reason": "Cold case: B2B enterprise AWS developer inquiry out of retail consumer support scope.",
     "reference_reply_guidelines": "Cold case override: escalate immediately to human specialist.",
     "is_cold_case": true,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_162",
@@ -1924,7 +2095,8 @@
     "gold_escalation_reason": "Cold case: Novel autonomous drone delivery property damage claim with zero historical precedent.",
     "reference_reply_guidelines": "Cold case override: escalate immediately to human specialist.",
     "is_cold_case": true,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_163",
@@ -1935,7 +2107,8 @@
     "gold_escalation_reason": "Cold case: Unsupported cryptocurrency payment inquiry outside standard payment rails.",
     "reference_reply_guidelines": "Cold case override: escalate immediately to human specialist.",
     "is_cold_case": true,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_164",
@@ -1946,7 +2119,8 @@
     "gold_escalation_reason": "Cold case: Specialized B2B institutional tax exemption compliance review.",
     "reference_reply_guidelines": "Cold case override: escalate immediately to human specialist.",
     "is_cold_case": true,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_165",
@@ -1957,7 +2131,8 @@
     "gold_escalation_reason": "Cold case: Commercial fleet physical property damage liability claim.",
     "reference_reply_guidelines": "Cold case override: escalate immediately to human specialist.",
     "is_cold_case": true,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_166",
@@ -1968,7 +2143,8 @@
     "gold_escalation_reason": "Cold case: B2B enterprise AWS developer inquiry out of retail consumer support scope.",
     "reference_reply_guidelines": "Cold case override: escalate immediately to human specialist.",
     "is_cold_case": true,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_167",
@@ -1979,7 +2155,8 @@
     "gold_escalation_reason": "Cold case: Novel autonomous drone delivery property damage claim with zero historical precedent.",
     "reference_reply_guidelines": "Cold case override: escalate immediately to human specialist.",
     "is_cold_case": true,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_168",
@@ -1990,7 +2167,8 @@
     "gold_escalation_reason": "Cold case: Unsupported cryptocurrency payment inquiry outside standard payment rails.",
     "reference_reply_guidelines": "Cold case override: escalate immediately to human specialist.",
     "is_cold_case": true,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_169",
@@ -2001,7 +2179,8 @@
     "gold_escalation_reason": "Cold case: Specialized B2B institutional tax exemption compliance review.",
     "reference_reply_guidelines": "Cold case override: escalate immediately to human specialist.",
     "is_cold_case": true,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_170",
@@ -2012,7 +2191,8 @@
     "gold_escalation_reason": "Cold case: Commercial fleet physical property damage liability claim.",
     "reference_reply_guidelines": "Cold case override: escalate immediately to human specialist.",
     "is_cold_case": true,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_171",
@@ -2023,7 +2203,8 @@
     "gold_escalation_reason": "Cold case: B2B enterprise AWS developer inquiry out of retail consumer support scope.",
     "reference_reply_guidelines": "Cold case override: escalate immediately to human specialist.",
     "is_cold_case": true,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_172",
@@ -2034,7 +2215,8 @@
     "gold_escalation_reason": "Cold case: Novel autonomous drone delivery property damage claim with zero historical precedent.",
     "reference_reply_guidelines": "Cold case override: escalate immediately to human specialist.",
     "is_cold_case": true,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_173",
@@ -2045,7 +2227,8 @@
     "gold_escalation_reason": "Cold case: Unsupported cryptocurrency payment inquiry outside standard payment rails.",
     "reference_reply_guidelines": "Cold case override: escalate immediately to human specialist.",
     "is_cold_case": true,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_174",
@@ -2056,7 +2239,8 @@
     "gold_escalation_reason": "Cold case: Specialized B2B institutional tax exemption compliance review.",
     "reference_reply_guidelines": "Cold case override: escalate immediately to human specialist.",
     "is_cold_case": true,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_175",
@@ -2067,7 +2251,8 @@
     "gold_escalation_reason": "Cold case: Commercial fleet physical property damage liability claim.",
     "reference_reply_guidelines": "Cold case override: escalate immediately to human specialist.",
     "is_cold_case": true,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_176",
@@ -2078,7 +2263,8 @@
     "gold_escalation_reason": "Cold case: B2B enterprise AWS developer inquiry out of retail consumer support scope.",
     "reference_reply_guidelines": "Cold case override: escalate immediately to human specialist.",
     "is_cold_case": true,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_177",
@@ -2089,7 +2275,8 @@
     "gold_escalation_reason": "Cold case: Novel autonomous drone delivery property damage claim with zero historical precedent.",
     "reference_reply_guidelines": "Cold case override: escalate immediately to human specialist.",
     "is_cold_case": true,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_178",
@@ -2100,7 +2287,8 @@
     "gold_escalation_reason": "Cold case: Unsupported cryptocurrency payment inquiry outside standard payment rails.",
     "reference_reply_guidelines": "Cold case override: escalate immediately to human specialist.",
     "is_cold_case": true,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_179",
@@ -2111,7 +2299,8 @@
     "gold_escalation_reason": "Cold case: Specialized B2B institutional tax exemption compliance review.",
     "reference_reply_guidelines": "Cold case override: escalate immediately to human specialist.",
     "is_cold_case": true,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   },
   {
     "id": "eval_gold_180",
@@ -2122,6 +2311,7 @@
     "gold_escalation_reason": "Cold case: Commercial fleet physical property damage liability claim.",
     "reference_reply_guidelines": "Cold case override: escalate immediately to human specialist.",
     "is_cold_case": true,
-    "is_borderline": false
+    "is_borderline": false,
+    "author_annotated": true
   }
 ]

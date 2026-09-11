@@ -240,11 +240,8 @@ def run_full_evaluation(golden_path: str = "data/golden_eval_set.json", output_p
     retrieval_impact = evaluate_retrieval_impact(calibrated_engine, golden_set)
 
     # Human-Judge Agreement study
-    sample_judge_items = [
-        {"human_approved": not g["gold_should_escalate"] or p.escalation.should_escalate, "judge_score": metrics_summary["calibrated_trust_first"]["judge_rubric"]["overall_score"]}
-        for g, p in zip(golden_set[:35], systems["calibrated_trust_first"]["results"][:35])
-    ]
-    judge_agreement = judge.evaluate_judge_human_agreement(sample_judge_items)
+    print("Evaluating empirical agreement between judge scores and human ratings (N=45)...")
+    judge_agreement = judge.evaluate_judge_human_agreement("data/judge_human_eval_dataset.json")
 
     final_report_data = {
         "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
@@ -295,7 +292,7 @@ def run_full_evaluation(golden_path: str = "data/golden_eval_set.json", output_p
     print(f"  • Top-3 Hit-Rate Before Reranking (alpha=1.0): {retrieval_impact['hit_rate_before_reranking_alpha_1_0']:.1%}")
     print(f"  • Top-3 Hit-Rate After Reranking (alpha=0.6):  {retrieval_impact['hit_rate_after_reranking_alpha_0_6']:.1%}")
     print(f"  • Mean Precedent Resolution Score: Before={retrieval_impact['mean_resolution_before']:.2f} -> After={retrieval_impact['mean_resolution_after']:.2f}")
-    print(f"  • Judge-Human Kappa Agreement: {judge_agreement['cohens_kappa']:.2f} ({judge_agreement['interpretation']})")
+    print(f"  • Judge-Human Agreement: Pearson r={judge_agreement['pearson_r']:.3f}, QWK={judge_agreement['quadratic_weighted_kappa']:.3f}, MAE={judge_agreement['mean_absolute_error']:.3f}")
     print("="*80 + "\n")
 
 
