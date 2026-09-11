@@ -1,0 +1,89 @@
+{
+  "version": "1.0",
+  "brand": "AmazonHelp",
+  "coarse_categories": {
+    "order_delivery": {
+      "display_name": "Order & Delivery",
+      "safety_tier": "auto_eligible",
+      "safety_tier_description": "Standard fulfillment and shipping inquiries eligible for automated resolution if confidence exceeds calibrated threshold.",
+      "sub_intents": {
+        "tracking_status_eta": {
+          "display_name": "Tracking Status & ETA",
+          "split_rationale": "High-volume inquiry regarding package transit, delivery window, or carrier delay. Grounds on standardized carrier tracking deep-links and expected delivery SLA communication."
+        },
+        "damaged_or_missing_items": {
+          "display_name": "Damaged or Missing Items",
+          "split_rationale": "Requires packaging verification, carrier claim intake, or replacement dispatch. Differs fundamentally from tracking by initiating claims workflow rather than tracking lookup."
+        },
+        "wrong_item_delivered": {
+          "display_name": "Wrong Item Delivered",
+          "split_rationale": "Requires return-and-replace authorization and inventory verification. Cannot use generic tracking reply; must provide return label guidance."
+        }
+      }
+    },
+    "payments_refunds": {
+      "display_name": "Payments & Refunds",
+      "safety_tier": "auto_eligible",
+      "safety_tier_description": "Transaction and refund status issues. Automatable for standard policy inquiries (SLA timelines), but escalates if payment disputes or unauthorized charges are present.",
+      "sub_intents": {
+        "refund_status_delay": {
+          "display_name": "Refund Status & Processing Delay",
+          "split_rationale": "Inquiries on standard 3-5 business day banking windows vs processed credit note. Grounds on standard refund timeline policies."
+        },
+        "double_billing_payment_failed": {
+          "display_name": "Double Billing & Failed Payments",
+          "split_rationale": "Involves payment gateway retry logic, pending authorization holds vs settled charges. Distinct from processed refunds."
+        },
+        "unauthorized_charge": {
+          "display_name": "Unauthorized Charge Dispute",
+          "split_rationale": "Financial security concern; involves potential card theft. Requires human escalation for fraud inspection."
+        }
+      }
+    },
+    "account_access": {
+      "display_name": "Account & Access",
+      "safety_tier": "hard_override_human",
+      "safety_tier_description": "HARD OVERRIDE: Any account security, compromised credentials, or OTP lockout must unconditionally route to human specialists.",
+      "sub_intents": {
+        "compromised_account_hijack": {
+          "display_name": "Compromised Account / Takeover",
+          "split_rationale": "High-risk identity compromise. Customer may have active unauthorized orders placed by bad actor. Hard-overridden to human security team."
+        },
+        "mfa_password_lockout": {
+          "display_name": "MFA & Password Lockout",
+          "split_rationale": "Access credential lockout or two-step verification device change. Hard-overridden to protect PII and prevent social engineering."
+        }
+      }
+    },
+    "product_digital": {
+      "display_name": "Product & Digital Services",
+      "safety_tier": "auto_eligible",
+      "safety_tier_description": "Digital subscription (Prime), Kindle, or digital media access issues.",
+      "sub_intents": {
+        "prime_membership_billing": {
+          "display_name": "Prime Membership & Renewal",
+          "split_rationale": "Inquiries regarding annual/monthly renewal, benefits, or accidental renewal cancellation within grace period."
+        },
+        "digital_content_kindle_video": {
+          "display_name": "Digital Content & Streaming Issues",
+          "split_rationale": "Troubleshooting digital entitlement, Kindle library sync, or Prime Video playback errors."
+        }
+      }
+    },
+    "abuse_safety": {
+      "display_name": "Abuse & Trust/Safety",
+      "safety_tier": "hard_override_human",
+      "safety_tier_description": "HARD OVERRIDE: Phishing, scams, brand impersonation, harassment, or legal threats unconditionally route to human trust/safety teams.",
+      "sub_intents": {
+        "phishing_scam_report": {
+          "display_name": "Phishing & Fake Amazon Impersonation",
+          "split_rationale": "Customer reporting suspicious SMS/calls claiming to be Amazon. Requires immediate reporting intake and security advisory."
+        },
+        "harassment_threatening_conduct": {
+          "display_name": "Threatening Conduct / Severe Escalation",
+          "split_rationale": "Legal threats, profanity, or aggressive disputes that pose legal or PR liability. Must never receive an automated chatbot reply."
+        }
+      }
+    }
+  }
+}

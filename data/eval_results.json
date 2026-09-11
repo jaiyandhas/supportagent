@@ -1,0 +1,797 @@
+{
+  "timestamp": "2026-09-11T07:10:12Z",
+  "golden_set_size": 180,
+  "cold_case_count": 25,
+  "borderline_case_count": 10,
+  "systems": {
+    "trivial_baseline": {
+      "intent_coarse": {
+        "accuracy": 0.706,
+        "macro_f1": 0.138,
+        "per_class_f1": {
+          "abuse_safety": 0.0,
+          "account_access": 0.0,
+          "general_other": 0.0,
+          "order_delivery": 0.827,
+          "payments_refunds": 0.0,
+          "product_digital": 0.0
+        },
+        "worst_class": "abuse_safety",
+        "worst_class_f1": 0.0
+      },
+      "intent_sub": {
+        "accuracy": 0.678,
+        "macro_f1": 0.062,
+        "per_class_f1": {
+          "aws_iot_enterprise": 0.0,
+          "b2b_tax_exemption": 0.0,
+          "compromised_account_hijack": 0.0,
+          "crypto_payment_unsupported": 0.0,
+          "damaged_or_missing_items": 0.0,
+          "digital_content_kindle_video": 0.0,
+          "fleet_property_damage": 0.0,
+          "harassment_threatening_conduct": 0.0,
+          "phishing_scam_report": 0.0,
+          "prime_air_drone_damage": 0.0,
+          "prime_membership_billing": 0.0,
+          "refund_status_delay": 0.0,
+          "tracking_status_eta": 0.808
+        },
+        "worst_class": "aws_iot_enterprise",
+        "worst_class_f1": 0.0
+      },
+      "escalation": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "auroc": 0.5
+      },
+      "calibration": {
+        "ece": 0.0,
+        "brier_score": 0.2,
+        "reliability_curve": [
+          {
+            "bin_index": 0,
+            "bin_center": 0.05,
+            "mean_confidence": 0.05,
+            "empirical_accuracy": 0.0,
+            "sample_count": 0
+          },
+          {
+            "bin_index": 1,
+            "bin_center": 0.15,
+            "mean_confidence": 0.15,
+            "empirical_accuracy": 0.0,
+            "sample_count": 0
+          },
+          {
+            "bin_index": 2,
+            "bin_center": 0.25,
+            "mean_confidence": 0.25,
+            "empirical_accuracy": 0.0,
+            "sample_count": 0
+          },
+          {
+            "bin_index": 3,
+            "bin_center": 0.35,
+            "mean_confidence": 0.35,
+            "empirical_accuracy": 0.0,
+            "sample_count": 0
+          },
+          {
+            "bin_index": 4,
+            "bin_center": 0.45,
+            "mean_confidence": 0.45,
+            "empirical_accuracy": 0.0,
+            "sample_count": 0
+          },
+          {
+            "bin_index": 5,
+            "bin_center": 0.55,
+            "mean_confidence": 0.55,
+            "empirical_accuracy": 0.0,
+            "sample_count": 0
+          },
+          {
+            "bin_index": 6,
+            "bin_center": 0.65,
+            "mean_confidence": 0.65,
+            "empirical_accuracy": 0.0,
+            "sample_count": 0
+          },
+          {
+            "bin_index": 7,
+            "bin_center": 0.75,
+            "mean_confidence": 0.75,
+            "empirical_accuracy": 0.0,
+            "sample_count": 0
+          },
+          {
+            "bin_index": 8,
+            "bin_center": 0.85,
+            "mean_confidence": 0.85,
+            "empirical_accuracy": 0.0,
+            "sample_count": 0
+          },
+          {
+            "bin_index": 9,
+            "bin_center": 0.95,
+            "mean_confidence": 0.95,
+            "empirical_accuracy": 0.0,
+            "sample_count": 0
+          }
+        ]
+      },
+      "coverage_risk_curve": [
+        {
+          "threshold": 0.05,
+          "coverage": 1.0,
+          "risk": 0.2,
+          "auto_handled_count": 180
+        },
+        {
+          "threshold": 0.1,
+          "coverage": 1.0,
+          "risk": 0.2,
+          "auto_handled_count": 180
+        },
+        {
+          "threshold": 0.14,
+          "coverage": 1.0,
+          "risk": 0.2,
+          "auto_handled_count": 180
+        },
+        {
+          "threshold": 0.19,
+          "coverage": 1.0,
+          "risk": 0.2,
+          "auto_handled_count": 180
+        },
+        {
+          "threshold": 0.24,
+          "coverage": 1.0,
+          "risk": 0.2,
+          "auto_handled_count": 180
+        },
+        {
+          "threshold": 0.29,
+          "coverage": 1.0,
+          "risk": 0.2,
+          "auto_handled_count": 180
+        },
+        {
+          "threshold": 0.33,
+          "coverage": 1.0,
+          "risk": 0.2,
+          "auto_handled_count": 180
+        },
+        {
+          "threshold": 0.38,
+          "coverage": 1.0,
+          "risk": 0.2,
+          "auto_handled_count": 180
+        },
+        {
+          "threshold": 0.43,
+          "coverage": 1.0,
+          "risk": 0.2,
+          "auto_handled_count": 180
+        },
+        {
+          "threshold": 0.48,
+          "coverage": 1.0,
+          "risk": 0.2,
+          "auto_handled_count": 180
+        },
+        {
+          "threshold": 0.52,
+          "coverage": 1.0,
+          "risk": 0.2,
+          "auto_handled_count": 180
+        },
+        {
+          "threshold": 0.57,
+          "coverage": 1.0,
+          "risk": 0.2,
+          "auto_handled_count": 180
+        },
+        {
+          "threshold": 0.62,
+          "coverage": 1.0,
+          "risk": 0.2,
+          "auto_handled_count": 180
+        },
+        {
+          "threshold": 0.67,
+          "coverage": 1.0,
+          "risk": 0.2,
+          "auto_handled_count": 180
+        },
+        {
+          "threshold": 0.71,
+          "coverage": 1.0,
+          "risk": 0.2,
+          "auto_handled_count": 180
+        },
+        {
+          "threshold": 0.76,
+          "coverage": 1.0,
+          "risk": 0.2,
+          "auto_handled_count": 180
+        },
+        {
+          "threshold": 0.81,
+          "coverage": 1.0,
+          "risk": 0.2,
+          "auto_handled_count": 180
+        },
+        {
+          "threshold": 0.86,
+          "coverage": 1.0,
+          "risk": 0.2,
+          "auto_handled_count": 180
+        },
+        {
+          "threshold": 0.9,
+          "coverage": 1.0,
+          "risk": 0.2,
+          "auto_handled_count": 180
+        },
+        {
+          "threshold": 0.95,
+          "coverage": 1.0,
+          "risk": 0.2,
+          "auto_handled_count": 180
+        }
+      ],
+      "judge_rubric": {
+        "faithfulness": 4.0,
+        "tone": 4.5,
+        "resolution_likelihood": 4.5,
+        "policy_adherence": 5.0,
+        "overall_score": 4.42
+      }
+    },
+    "simple_baseline": {
+      "intent_coarse": {
+        "accuracy": 0.756,
+        "macro_f1": 0.262,
+        "per_class_f1": {
+          "abuse_safety": 0.0,
+          "account_access": 0.0,
+          "general_other": 0.0,
+          "order_delivery": 0.855,
+          "payments_refunds": 0.432,
+          "product_digital": 0.286
+        },
+        "worst_class": "abuse_safety",
+        "worst_class_f1": 0.0
+      },
+      "intent_sub": {
+        "accuracy": 0.722,
+        "macro_f1": 0.131,
+        "per_class_f1": {
+          "aws_iot_enterprise": 0.0,
+          "b2b_tax_exemption": 0.0,
+          "compromised_account_hijack": 0.0,
+          "crypto_payment_unsupported": 0.0,
+          "damaged_or_missing_items": 0.0,
+          "digital_content_kindle_video": 0.333,
+          "fleet_property_damage": 0.0,
+          "harassment_threatening_conduct": 0.0,
+          "phishing_scam_report": 0.0,
+          "prime_air_drone_damage": 0.0,
+          "prime_membership_billing": 0.0,
+          "refund_status_delay": 0.538,
+          "tracking_status_eta": 0.833
+        },
+        "worst_class": "aws_iot_enterprise",
+        "worst_class_f1": 0.0
+      },
+      "escalation": {
+        "precision": 0.201,
+        "recall": 1.0,
+        "f1": 0.335,
+        "auroc": 0.573
+      },
+      "calibration": {
+        "ece": 0.483,
+        "brier_score": 0.386,
+        "reliability_curve": [
+          {
+            "bin_index": 0,
+            "bin_center": 0.05,
+            "mean_confidence": 0.0,
+            "empirical_accuracy": 0.167,
+            "sample_count": 6
+          },
+          {
+            "bin_index": 1,
+            "bin_center": 0.15,
+            "mean_confidence": 0.186,
+            "empirical_accuracy": 1.0,
+            "sample_count": 4
+          },
+          {
+            "bin_index": 2,
+            "bin_center": 0.25,
+            "mean_confidence": 0.257,
+            "empirical_accuracy": 0.824,
+            "sample_count": 74
+          },
+          {
+            "bin_index": 3,
+            "bin_center": 0.35,
+            "mean_confidence": 0.344,
+            "empirical_accuracy": 0.75,
+            "sample_count": 68
+          },
+          {
+            "bin_index": 4,
+            "bin_center": 0.45,
+            "mean_confidence": 0.452,
+            "empirical_accuracy": 0.941,
+            "sample_count": 17
+          },
+          {
+            "bin_index": 5,
+            "bin_center": 0.55,
+            "mean_confidence": 0.55,
+            "empirical_accuracy": 1.0,
+            "sample_count": 8
+          },
+          {
+            "bin_index": 6,
+            "bin_center": 0.65,
+            "mean_confidence": 0.645,
+            "empirical_accuracy": 1.0,
+            "sample_count": 3
+          },
+          {
+            "bin_index": 7,
+            "bin_center": 0.75,
+            "mean_confidence": 0.75,
+            "empirical_accuracy": 0.0,
+            "sample_count": 0
+          },
+          {
+            "bin_index": 8,
+            "bin_center": 0.85,
+            "mean_confidence": 0.85,
+            "empirical_accuracy": 0.0,
+            "sample_count": 0
+          },
+          {
+            "bin_index": 9,
+            "bin_center": 0.95,
+            "mean_confidence": 0.95,
+            "empirical_accuracy": 0.0,
+            "sample_count": 0
+          }
+        ]
+      },
+      "coverage_risk_curve": [
+        {
+          "threshold": 0.05,
+          "coverage": 0.967,
+          "risk": 0.178,
+          "auto_handled_count": 174
+        },
+        {
+          "threshold": 0.1,
+          "coverage": 0.967,
+          "risk": 0.178,
+          "auto_handled_count": 174
+        },
+        {
+          "threshold": 0.14,
+          "coverage": 0.967,
+          "risk": 0.178,
+          "auto_handled_count": 174
+        },
+        {
+          "threshold": 0.19,
+          "coverage": 0.956,
+          "risk": 0.18,
+          "auto_handled_count": 172
+        },
+        {
+          "threshold": 0.24,
+          "coverage": 0.828,
+          "risk": 0.181,
+          "auto_handled_count": 149
+        },
+        {
+          "threshold": 0.29,
+          "coverage": 0.606,
+          "risk": 0.183,
+          "auto_handled_count": 109
+        },
+        {
+          "threshold": 0.33,
+          "coverage": 0.328,
+          "risk": 0.102,
+          "auto_handled_count": 59
+        },
+        {
+          "threshold": 0.38,
+          "coverage": 0.239,
+          "risk": 0.14,
+          "auto_handled_count": 43
+        },
+        {
+          "threshold": 0.43,
+          "coverage": 0.122,
+          "risk": 0.0,
+          "auto_handled_count": 22
+        },
+        {
+          "threshold": 0.48,
+          "coverage": 0.089,
+          "risk": 0.0,
+          "auto_handled_count": 16
+        },
+        {
+          "threshold": 0.52,
+          "coverage": 0.044,
+          "risk": 0.0,
+          "auto_handled_count": 8
+        },
+        {
+          "threshold": 0.57,
+          "coverage": 0.033,
+          "risk": 0.0,
+          "auto_handled_count": 6
+        },
+        {
+          "threshold": 0.62,
+          "coverage": 0.011,
+          "risk": 0.0,
+          "auto_handled_count": 2
+        },
+        {
+          "threshold": 0.67,
+          "coverage": 0.006,
+          "risk": 0.0,
+          "auto_handled_count": 1
+        },
+        {
+          "threshold": 0.71,
+          "coverage": 0.0,
+          "risk": 0.0,
+          "auto_handled_count": 0
+        },
+        {
+          "threshold": 0.76,
+          "coverage": 0.0,
+          "risk": 0.0,
+          "auto_handled_count": 0
+        },
+        {
+          "threshold": 0.81,
+          "coverage": 0.0,
+          "risk": 0.0,
+          "auto_handled_count": 0
+        },
+        {
+          "threshold": 0.86,
+          "coverage": 0.0,
+          "risk": 0.0,
+          "auto_handled_count": 0
+        },
+        {
+          "threshold": 0.9,
+          "coverage": 0.0,
+          "risk": 0.0,
+          "auto_handled_count": 0
+        },
+        {
+          "threshold": 0.95,
+          "coverage": 0.0,
+          "risk": 0.0,
+          "auto_handled_count": 0
+        }
+      ],
+      "judge_rubric": {
+        "faithfulness": 4.8,
+        "tone": 4.19,
+        "resolution_likelihood": 4.79,
+        "policy_adherence": 5.0,
+        "overall_score": 4.67
+      }
+    },
+    "calibrated_trust_first": {
+      "intent_coarse": {
+        "accuracy": 0.728,
+        "macro_f1": 0.432,
+        "per_class_f1": {
+          "abuse_safety": 0.167,
+          "account_access": 0.5,
+          "general_other": 0.0,
+          "order_delivery": 0.833,
+          "payments_refunds": 0.615,
+          "product_digital": 0.476
+        },
+        "worst_class": "general_other",
+        "worst_class_f1": 0.0
+      },
+      "intent_sub": {
+        "accuracy": 0.706,
+        "macro_f1": 0.24,
+        "per_class_f1": {
+          "aws_iot_enterprise": 0.0,
+          "b2b_tax_exemption": 0.0,
+          "compromised_account_hijack": 0.5,
+          "crypto_payment_unsupported": 0.0,
+          "damaged_or_missing_items": 0.429,
+          "digital_content_kindle_video": 0.5,
+          "fleet_property_damage": 0.0,
+          "harassment_threatening_conduct": 0.333,
+          "mfa_password_lockout": 0.0,
+          "phishing_scam_report": 0.0,
+          "prime_air_drone_damage": 0.0,
+          "prime_membership_billing": 0.0,
+          "refund_status_delay": 0.762,
+          "tracking_status_eta": 0.831
+        },
+        "worst_class": "aws_iot_enterprise",
+        "worst_class_f1": 0.0
+      },
+      "escalation": {
+        "precision": 0.219,
+        "recall": 0.972,
+        "f1": 0.357,
+        "auroc": 0.754
+      },
+      "calibration": {
+        "ece": 0.369,
+        "brier_score": 0.272,
+        "reliability_curve": [
+          {
+            "bin_index": 0,
+            "bin_center": 0.05,
+            "mean_confidence": 0.066,
+            "empirical_accuracy": 0.521,
+            "sample_count": 48
+          },
+          {
+            "bin_index": 1,
+            "bin_center": 0.15,
+            "mean_confidence": 0.15,
+            "empirical_accuracy": 0.0,
+            "sample_count": 0
+          },
+          {
+            "bin_index": 2,
+            "bin_center": 0.25,
+            "mean_confidence": 0.25,
+            "empirical_accuracy": 0.0,
+            "sample_count": 0
+          },
+          {
+            "bin_index": 3,
+            "bin_center": 0.35,
+            "mean_confidence": 0.35,
+            "empirical_accuracy": 0.0,
+            "sample_count": 0
+          },
+          {
+            "bin_index": 4,
+            "bin_center": 0.45,
+            "mean_confidence": 0.489,
+            "empirical_accuracy": 0.615,
+            "sample_count": 13
+          },
+          {
+            "bin_index": 5,
+            "bin_center": 0.55,
+            "mean_confidence": 0.547,
+            "empirical_accuracy": 0.951,
+            "sample_count": 82
+          },
+          {
+            "bin_index": 6,
+            "bin_center": 0.65,
+            "mean_confidence": 0.625,
+            "empirical_accuracy": 0.892,
+            "sample_count": 37
+          },
+          {
+            "bin_index": 7,
+            "bin_center": 0.75,
+            "mean_confidence": 0.75,
+            "empirical_accuracy": 0.0,
+            "sample_count": 0
+          },
+          {
+            "bin_index": 8,
+            "bin_center": 0.85,
+            "mean_confidence": 0.85,
+            "empirical_accuracy": 0.0,
+            "sample_count": 0
+          },
+          {
+            "bin_index": 9,
+            "bin_center": 0.95,
+            "mean_confidence": 0.95,
+            "empirical_accuracy": 0.0,
+            "sample_count": 0
+          }
+        ]
+      },
+      "coverage_risk_curve": [
+        {
+          "threshold": 0.05,
+          "coverage": 0.939,
+          "risk": 0.195,
+          "auto_handled_count": 169
+        },
+        {
+          "threshold": 0.1,
+          "coverage": 0.733,
+          "risk": 0.098,
+          "auto_handled_count": 132
+        },
+        {
+          "threshold": 0.14,
+          "coverage": 0.733,
+          "risk": 0.098,
+          "auto_handled_count": 132
+        },
+        {
+          "threshold": 0.19,
+          "coverage": 0.733,
+          "risk": 0.098,
+          "auto_handled_count": 132
+        },
+        {
+          "threshold": 0.24,
+          "coverage": 0.733,
+          "risk": 0.098,
+          "auto_handled_count": 132
+        },
+        {
+          "threshold": 0.29,
+          "coverage": 0.733,
+          "risk": 0.098,
+          "auto_handled_count": 132
+        },
+        {
+          "threshold": 0.33,
+          "coverage": 0.733,
+          "risk": 0.098,
+          "auto_handled_count": 132
+        },
+        {
+          "threshold": 0.38,
+          "coverage": 0.733,
+          "risk": 0.098,
+          "auto_handled_count": 132
+        },
+        {
+          "threshold": 0.43,
+          "coverage": 0.733,
+          "risk": 0.098,
+          "auto_handled_count": 132
+        },
+        {
+          "threshold": 0.48,
+          "coverage": 0.728,
+          "risk": 0.099,
+          "auto_handled_count": 131
+        },
+        {
+          "threshold": 0.52,
+          "coverage": 0.572,
+          "risk": 0.068,
+          "auto_handled_count": 103
+        },
+        {
+          "threshold": 0.57,
+          "coverage": 0.311,
+          "risk": 0.089,
+          "auto_handled_count": 56
+        },
+        {
+          "threshold": 0.62,
+          "coverage": 0.111,
+          "risk": 0.05,
+          "auto_handled_count": 20
+        },
+        {
+          "threshold": 0.67,
+          "coverage": 0.0,
+          "risk": 0.0,
+          "auto_handled_count": 0
+        },
+        {
+          "threshold": 0.71,
+          "coverage": 0.0,
+          "risk": 0.0,
+          "auto_handled_count": 0
+        },
+        {
+          "threshold": 0.76,
+          "coverage": 0.0,
+          "risk": 0.0,
+          "auto_handled_count": 0
+        },
+        {
+          "threshold": 0.81,
+          "coverage": 0.0,
+          "risk": 0.0,
+          "auto_handled_count": 0
+        },
+        {
+          "threshold": 0.86,
+          "coverage": 0.0,
+          "risk": 0.0,
+          "auto_handled_count": 0
+        },
+        {
+          "threshold": 0.9,
+          "coverage": 0.0,
+          "risk": 0.0,
+          "auto_handled_count": 0
+        },
+        {
+          "threshold": 0.95,
+          "coverage": 0.0,
+          "risk": 0.0,
+          "auto_handled_count": 0
+        }
+      ],
+      "judge_rubric": {
+        "faithfulness": 4.45,
+        "tone": 4.98,
+        "resolution_likelihood": 4.7,
+        "policy_adherence": 5.0,
+        "overall_score": 4.74
+      }
+    }
+  },
+  "retrieval_impact": {
+    "hit_rate_before_reranking_alpha_1_0": 0.983,
+    "hit_rate_after_reranking_alpha_0_6": 0.983,
+    "mean_resolution_before": 0.657,
+    "mean_resolution_after": 0.87,
+    "alpha_sensitivity_sweep": [
+      {
+        "alpha": 0.0,
+        "hit_rate": 0.967,
+        "mean_resolution_score": 0.913
+      },
+      {
+        "alpha": 0.2,
+        "hit_rate": 0.967,
+        "mean_resolution_score": 0.913
+      },
+      {
+        "alpha": 0.4,
+        "hit_rate": 0.967,
+        "mean_resolution_score": 0.905
+      },
+      {
+        "alpha": 0.6,
+        "hit_rate": 0.983,
+        "mean_resolution_score": 0.87
+      },
+      {
+        "alpha": 0.8,
+        "hit_rate": 0.983,
+        "mean_resolution_score": 0.729
+      },
+      {
+        "alpha": 1.0,
+        "hit_rate": 0.983,
+        "mean_resolution_score": 0.657
+      }
+    ]
+  },
+  "judge_human_agreement": {
+    "sample_size": 35,
+    "percentage_agreement": 1.0,
+    "cohens_kappa": 1.0,
+    "interpretation": "Substantial agreement (Kappa >= 0.70)"
+  }
+}
