@@ -31,7 +31,7 @@ The complete pipeline was evaluated against a **stratified golden set of 180 cur
 
 We compare three distinct systems:
 1. **Trivial Baseline**: Majority class predictor (`order_delivery`), static canned response, never escalates (`should_escalate = False`).
-2. **Simple Baseline**: TF-IDF intent classifier, plain top-1 nearest-neighbor retrieval (no outcome reranking), fixed raw cosine similarity threshold ($0.65$) for escalation.
+2. **Simple Baseline**: TF-IDF intent classifier, plain top-1 nearest-neighbor retrieval (no outcome reranking), tuned similarity threshold ($\tau = 0.35$) for escalation (flags 70.6% for human review).
 3. **Calibrated Trust-First Agent (Ours)**: Hierarchical intent classifier with safety tiers, two-stage outcome-weighted FAISS retrieval ($\alpha = 0.60$), and adaptive-k consensus with Platt-scaled calibration.
 
 ### Comparative Benchmark Results
@@ -40,20 +40,20 @@ We compare three distinct systems:
 
 | Metric | Trivial Baseline | Simple Baseline | Trust-First (Ours) | Context & Trade-off |
 | :--- | :---: | :---: | :---: | :--- |
-| **Coarse Intent Accuracy** | 0.706 | **0.756** | 0.728 | Simple baseline wins on coarse classification; see failure analysis |
+| **Coarse Intent Accuracy** | 0.706 | **0.756** | 0.733 | Simple baseline wins on coarse classification; see failure analysis |
 | **Coarse Worst-Class F1** | 0.000 (`abuse_safety`, n=7) | 0.000 (`abuse_safety`, n=7) | 0.000 (`general_other`, n=10) | Support gap & out-of-taxonomy cold cases |
-| **Sub-Intent Macro F1** | 0.062 | 0.131 | **0.240** | **0.240 absolute** (+83.2% relative); fine-grained split is hard |
-| **Escalation Precision** | 0.000 | 0.201 | **0.219** | **0.219 absolute** (+8.9% rel); conservative over-escalation bias |
-| **Escalation Recall** | 0.000 | **1.000** | 0.972 | Simple baseline achieves 1.000 trivially by escalating 100% |
-| **Escalation F1** | 0.000 | 0.335 | **0.357** | **0.357 absolute** (+6.5% relative) |
-| **Escalation AUROC** | 0.500 | 0.573 | **0.754** | **+31.6% relative gain** in ranking discrimination |
-| **Expected Calibration Error (ECE) ↓** | 0.000* | 0.483 | **0.369** | **-23.6% error reduction** (*Trivial 0.000 is degenerate constant artifact) |
-| **Brier Score Loss ↓** | 0.200 | 0.386 | **0.272** | **-29.5% improvement** in probabilistic accuracy |
-| **Judge Overall Quality (1-5) ↑** | 2.64 | **4.33** | 4.12 | Simple wins on imitation by copying 100% of text; see §2.2 |
-| **Judge Faithfulness (1-5) ↑** | 1.66 | **4.95** | 4.01 | Anchored rubric heavily penalizes canned deflection (1.66) |
+| **Sub-Intent Macro F1** | 0.062 | 0.131 | **0.241** | **0.241 absolute** (+84.0% relative); fine-grained split is hard |
+| **Escalation Precision** | 0.000 | **0.236** | 0.224 | **0.224 absolute**; calibrated conservative safety bias |
+| **Escalation Recall** | 0.000 | 0.833 | **1.000** | **1.000** zero safety false negatives on golden set |
+| **Escalation F1** | 0.000 | **0.368** | 0.365 | Tuned baseline achieves 0.368 F1 at $\tau=0.35$ |
+| **Escalation AUROC** | 0.500 | 0.573 | **0.760** | **+32.6% relative gain** in ranking discrimination |
+| **Expected Calibration Error (ECE) ↓** | 0.000* | 0.482 | **0.368** | **-23.7% error reduction** (*Trivial 0.000 is degenerate constant artifact) |
+| **Brier Score Loss ↓** | 0.200 | 0.385 | **0.269** | **-30.1% improvement** in probabilistic accuracy |
+| **Judge Overall Quality (1-5) ↑** | 2.64 | **4.18** | 4.12 | Simple copies verbatim human tweets; see §3.1 & §3.2 |
+| **Judge Faithfulness (1-5) ↑** | 1.66 | **4.95** | 4.00 | Anchored rubric heavily penalizes canned deflection (1.66) |
 
 ### 2.1 Headline Artifact 1: Probability Calibration & Reliability
-The central claim of this system is that it knows when it does not know. The Simple Baseline relies on raw cosine similarity, which suffers from severe overconfidence (ECE = 0.483, Brier = 0.386). The Trust-First Agent reduces Expected Calibration Error to **0.369** and Brier score to **0.272** via Platt scaling over adaptive-k consensus features ($Agreement = \bar{R} \cdot (1 - \sigma_R) \cdot \text{Consensus}$).
+The central claim of this system is that it knows when it does not know. The Simple Baseline relies on raw cosine similarity, which suffers from severe overconfidence (ECE = 0.482, Brier = 0.385). The Trust-First Agent reduces Expected Calibration Error to **0.368** and Brier score to **0.269** via Platt scaling over adaptive-k consensus features ($Agreement = \bar{R} \cdot (1 - \sigma_R) \cdot \text{Consensus}$).
 
 ![Trust Panel and Calibration Curve UI](file:///Users/jaiyandh/Projects/supportagent/docs/assets/trust_panel_demo.jpg)
 *Figure 1: UI Message Audit View showing precedent strip with outcome resolution scores and Trust Panel rendering the calibrated confidence indicator and live reliability diagram.*
@@ -71,7 +71,7 @@ Standard RAG retrieves the most *topically similar* historical tweet. By reranki
 
 ## 3. Failure Analysis & Diagnostics
 
-### 3.1 LLM-Judge Discrimination Diagnostic
+### 3.1 LLM-Judge Discrimination & Pairwise Comparisons
 In early runs, judge scores clustered at 4.42 / 4.67 / 4.74, indicating ceiling compression where a fixed canned reply was awarded 4.42/5. Diagnostic audit of evaluation transcripts revealed that the initial rubric lacked topical relevance anchors and awarded baseline points to any polite phrasing containing words like "app" or "contact":
 
 > **Diagnostic Transcript (Pre-Fix Failure)**:  
@@ -82,13 +82,36 @@ In early runs, judge scores clustered at 4.42 / 4.67 / 4.74, indicating ceiling 
 
 **The Fix**: Implemented an anchored rubric with topical alignment penalties and pairwise win-rate tracking. Irrelevant canned deflections and escalation routing failures are now strictly capped at 1.0–2.0. Under the anchored rubric:
 - **Trivial Baseline collapsed to 2.64 / 5.0** (Faithfulness 1.66), reflecting genuine failure on payments, security, and cold cases.
-- **Trust-First scored 4.12 / 5.0**, winning **100% of pairwise comparisons against the Trivial Baseline** (180 wins, 0 ties, 0 losses).
-- The Simple Baseline scored 4.33 / 5.0 by copying verbatim historical text, but did so while **escalating 100% of traffic** (zero automation coverage).
+- **Trust-First scored 4.12 / 5.0**, achieving **100% pairwise win rate against Trivial** (180 wins, 0 ties, 0 losses).
+- **Pairwise Comparison vs. Simple Baseline**: Trust-First recorded **32 wins (17.8%), 90 ties (50.0%), and 58 losses (32.2%)**. Trust-First **loses more pairwise comparisons to Simple than it wins**. Rather than concealing this counter-intuitive result, we diagnose its mechanical cause below.
 
-### 3.2 Coarse Intent Accuracy Trade-off (0.728 vs 0.756)
-The Simple baseline achieved 0.756 coarse accuracy compared to 0.728 for the Trust-First system. The hierarchical classifier introduces safety tiers and conditional sub-intent modeling; this structural constraint slightly depresses coarse classification on boundary edge cases in exchange for a massive gain in **sub-intent Macro F1 (0.240 vs 0.131, +83.2%)** and **escalation AUROC (0.754 vs 0.573, +31.6%)**.
+### 3.2 Why Trust-First Scores Lower Than Simple on the LLM-Judge (4.12 vs. 4.18)
+To understand why Trust-First loses 32.2% of pairwise head-to-heads to the Simple baseline, we pulled and analyzed the 3 lowest-scoring Trust-First evaluation transcripts (`case_39`, `case_0`, `case_4`). The gap arises from two specific structural dynamics rather than a lack of conversational capability:
 
-### 3.3 Root Cause of Coarse Worst-Class F1 = 0.000
+1. **Verbatim Text Copying Maximizes Rubric Faithfulness (4.95 vs. 4.00)**:  
+   The Simple baseline copies the retrieved historical tweet verbatim (`candidate.support_reply`). Because its reply has near 100% lexical token overlap with the precedent candidate, the anchored judge awards it near-perfect faithfulness (**4.95 / 5.0**). In contrast, Trust-First in deterministic repro mode (Mode 1) normalizes text, strips metadata/agent signatures (e.g. `^SI`, `(2/3)`), prepends empathetic greetings, and standardizes deflection language. Even minor paraphrastic synthesis drops the measured lexical overlap with the raw precedent candidate string, yielding **4.00 / 5.0**.
+
+2. **Historical Human Tweets Ask Situational Follow-Ups; Deterministic Templates Deflect**:  
+   Real historical tweets from human AmazonHelp agents frequently contained tailored, conversational questions. Consider **Query #39**:  
+   - *Customer Query*: `"hi i preordered star wars battle front II and you sent an email with beta code but its not working"`  
+   - *Simple Baseline Reply*: `"Hello Jamie! When did you place your pre-order?"` (Judge: 3.50; Faithfulness 5.0).  
+   - *Trust-First Reply (Deterministic Repro)*: `"Hello, thanks for reaching out. Please reach out here for help"` (Judge: 3.62; Resolution Likelihood: 1.8).  
+   Similarly on **Query #0** (*"I ordered on July 25th. I still do not receive anything and you already charged me... Unacceptable 😡"*), Simple copied a human tweet asking *"Hi, sorry, what's the status of the tracking and delivery date? Have you looked into an A-Z Claim:"* (Score: 4.44), whereas Trust-First safely routed the angry customer via intake deflection *"Please fill this form and I’ll contact you at the earliest"* (Score: 3.85, Resolution Likelihood: 1.8).  
+   Because the anchored judge requires issue-specific entity overlap ("beta code", "claim", "tracking") to award high resolution likelihood, Trust-First's generic deflection templates are penalized (Resolution Likelihood 1.8 vs 3.5), despite being the safer action. When upgraded to Live LLM Mode (Mode 2), dynamic generation synthesizes contextual issue keywords, but in deterministic offline mode, safety-first intake templates trade conversational specificity for zero false negatives.
+
+### 3.3 Simple Baseline Degeneracy Audit: Threshold Recalibration ($\tau = 0.35$)
+A critical audit was conducted to determine whether the Simple baseline was a real baseline or an always-escalate strawman:
+- **Initial Flaw**: With an initial cosine threshold of $0.65$ (or $0.75$), TF-IDF similarities across short customer tweets (mean: 0.318, max: 0.682) meant that **179 of 180 golden queries (99.4%)** fell below the threshold. The baseline was essentially an always-escalate policy with 0.6% automation coverage, making any metric win over it meaningless.
+- **Recalibrated Baseline ($\tau = 0.35$)**: We recalibrated Simple's threshold to $\tau = 0.35$, yielding a genuine decision distribution:
+  - **127 of 180 queries (70.6%)** flagged for escalation.
+  - **53 of 180 queries (29.4%)** auto-handled.
+  - Performance: Precision = **0.236**, Recall = **0.833**, F1 = **0.368**, AUROC = **0.573**.
+- **The Honest Takeaway**: Under a tuned threshold, Simple actually achieves a slightly higher escalation precision (**0.236 vs. 0.224**) and F1 (**0.368 vs. 0.365**) than Trust-First. Trust-First intentionally accepts lower precision (more false alarms) because it guarantees **100% recall on safety-critical escalations** (1.000 vs. 0.833 for Simple) and achieves far superior ranking discrimination (**AUROC 0.760 vs. 0.573**) and calibration (**ECE 0.368 vs. 0.482**). Simple is thus a tuned, competitive baseline, and the trade-off is mathematically transparent.
+
+### 3.4 Coarse Intent Accuracy Trade-off (0.733 vs 0.756)
+The Simple baseline achieved 0.756 coarse accuracy compared to 0.733 for the Trust-First system. The hierarchical classifier introduces safety tiers and conditional sub-intent modeling; this structural constraint slightly depresses coarse classification on boundary edge cases in exchange for a massive gain in **sub-intent Macro F1 (0.241 vs 0.131, +84.0%)** and **escalation AUROC (0.760 vs 0.573, +32.6%)**.
+
+### 3.5 Root Cause of Coarse Worst-Class F1 = 0.000
 All three systems recorded 0.000 F1 on specific minority classes. The underlying causes are distinct:
 1. **Trust-First System on `general_other` (Support: n=10, F1 = 0.000)**:  
    `general_other` was assigned as the ground truth label for the 10 deliberate cold-case scenarios (e.g. AWS Greengrass IoT, Bitcoin payments, drone collisions) to test out-of-domain detection. However, `taxonomy.json` defines only 5 operational categories (`order_delivery`, `payments_refunds`, `account_access`, `product_digital`, `abuse_safety`). Because `general_other` is an out-of-taxonomy class, the 5-way classifier can never predict it, resulting in 0% recall. Crucially, **the escalation gate correctly caught 100% of these cases** via the cold-case similarity threshold ($S_{\text{top}} \le 0.36$), proving that out-of-domain safety is achieved at the gate level rather than the classifier level.
@@ -101,23 +124,29 @@ All three systems recorded 0.000 F1 on specific minority classes. The underlying
 
 Responsible engineering requires transparently deconstructing headline metrics before a reviewer audits them in production:
 
-1. **Escalation Precision Is 0.219 (Roughly 4 in 5 Escalations Are Over-Escalations)**:
-   - *The Reality*: Leading with a "+8.9% relative improvement" obscures the absolute number: **0.219**. Only ~22% of messages flagged for human review strictly required escalation under gold labels.
-   - *Operational Consequence*: The system operates with a severe conservative bias. While this guarantees 97.2% safety recall, it burdens human agent queues with false alarms.
+1. **Escalation Precision Is 0.224 (Roughly 4 in 5 Escalations Are Over-Escalations)**:
+   - *The Reality*: Leading with high recall or relative gains obscures the absolute precision: **0.224**. Only ~22% of messages flagged for human review strictly required escalation under gold labels.
+   - *Operational Consequence*: The system operates with a deliberate conservative safety bias. While this guarantees 100% safety recall on the golden set, it burdens human agent queues with false alarms.
 
-2. **Sub-Intent Macro F1 of 0.240 Is Low in Absolute Terms**:
-   - *The Reality*: Although +83.2% higher than the simple baseline (0.131), an absolute Macro F1 of **0.240** means fine-grained sub-intent routing remains noisy across 11 classes. High volume in `tracking_status_eta` masks poor classification on rare sub-intents like `unauthorized_charge` and `mfa_password_lockout`.
+2. **Sub-Intent Macro F1 of 0.241 Is Low in Absolute Terms**:
+   - *The Reality*: Although +84.0% higher than the simple baseline (0.131), an absolute Macro F1 of **0.241** means fine-grained sub-intent routing remains noisy across 11 classes. High volume in `tracking_status_eta` masks poor classification on rare sub-intents like `unauthorized_charge` and `mfa_password_lockout`.
 
-3. **Trivial Baseline's ECE = 0.000 Is a Degenerate Artifact**:
+3. **Recalibrated Simple Baseline Outperforms Trust-First on Precision (0.236 vs. 0.224) and F1 (0.368 vs. 0.365)**:
+   - *The Reality*: When the Simple baseline's similarity threshold is calibrated to $\tau = 0.35$ rather than left at a degenerate always-escalate value, it achieves higher precision and F1 than Trust-First. Trust-First's advantage is confined to safety recall (1.000 vs. 0.833), calibration error (ECE 0.368 vs. 0.482), and AUROC (0.760 vs. 0.573).
+
+4. **Trust-First Loses More Pairwise Comparisons to Simple Than It Wins (32.2% Loss vs. 17.8% Win)**:
+   - *The Reality*: In pairwise LLM-judge matchups against Simple, Trust-First wins 17.8%, ties 50.0%, and loses 32.2%. As diagnosed in §3.2, Simple copies verbatim historical human replies that include specific situational questions and retain 100% lexical overlap with precedents, whereas Trust-First's deterministic repro mode uses cautious intake deflection templates that the judge penalizes for lacking issue keywords.
+
+5. **Trivial Baseline's ECE = 0.000 Is a Degenerate Artifact**:
    - *The Reality*: A reader might glance at ECE = 0.000 and conclude the trivial baseline is perfectly calibrated. It is not; the trivial baseline outputs a constant confidence of 1.0 for every query, clustering all samples into a single boundary bin. Its AUROC of 0.500 proves it has zero discriminative power.
 
-4. **100% Self-Relabeling Agreement Reflects Same-Day Rule Consistency**:
-   - *The Reality*: The 100% blind re-annotation agreement was measured on a 20-sample subset re-labeled within the same curation session. It proves internal rule consistency, not longitudinal objectivity. Cross-annotator evaluation with external annotators would realistically yield $\kappa \approx 0.75 - 0.85$.
+6. **100% Self-Relabeling Agreement Reflects Same-Day Rule Consistency**:
+   - *The Reality*: The 100% blind re-annotation agreement was measured on a 20-sample subset re-labeled within the same curation session. It proves internal rule consistency, not longitudinal objectivity across independent human annotators. An external cross-annotator study without shared annotator priors would likely fall in a moderate-to-strong agreement range rather than near-perfect unanimity.
 
-5. **Golden Set Skew vs. Real Production Volume**:
+7. **Golden Set Skew vs. Real Production Volume**:
    - *The Reality*: In our golden set, **22.2%** of cases are complex disputes or safety overrides, and **13.8%** are cold cases. In real Twitter traffic, **87.0%** of inquiries are routine tracking questions. In real traffic, naive accuracy will appear artificially high, while escalation precision will appear even lower.
 
-6. **The Resolution Proxy Equates Abandonment with Resolution**:
+8. **The Resolution Proxy Equates Abandonment with Resolution**:
    - *The Reality*: Under the thread heuristic, customers who give up after an unhelpful reply receive a default resolution proxy ($R = 0.70$). True resolution can only be measured via downstream ERP/ticket state (e.g. no re-contact within 72 hours).
 
 ---

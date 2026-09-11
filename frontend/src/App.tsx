@@ -196,20 +196,20 @@ export const App: React.FC = () => {
                   <tr>
                     <td className="py-2 text-[#1D1D1F]">Escalation Precision</td>
                     <td className="py-2 text-[#6E6E73]">{evalResults.systems.trivial_baseline.escalation.precision.toFixed(3)}</td>
-                    <td className="py-2 text-[#6E6E73]">{evalResults.systems.simple_baseline.escalation.precision.toFixed(3)}</td>
-                    <td className="py-2 font-medium text-[#0071E3]">{evalResults.systems.calibrated_trust_first.escalation.precision.toFixed(3)}</td>
+                    <td className="py-2 font-medium text-[#1D1D1F]">{evalResults.systems.simple_baseline.escalation.precision.toFixed(3)}</td>
+                    <td className="py-2 text-[#6E6E73]">{evalResults.systems.calibrated_trust_first.escalation.precision.toFixed(3)}</td>
                   </tr>
                   <tr>
                     <td className="py-2 text-[#1D1D1F]">Escalation Recall</td>
                     <td className="py-2 text-[#6E6E73]">{evalResults.systems.trivial_baseline.escalation.recall.toFixed(3)}</td>
-                    <td className="py-2 font-medium text-[#1D1D1F]">{evalResults.systems.simple_baseline.escalation.recall.toFixed(3)}</td>
-                    <td className="py-2 text-[#6E6E73]">{evalResults.systems.calibrated_trust_first.escalation.recall.toFixed(3)}</td>
+                    <td className="py-2 text-[#6E6E73]">{evalResults.systems.simple_baseline.escalation.recall.toFixed(3)}</td>
+                    <td className="py-2 font-medium text-[#0071E3]">{evalResults.systems.calibrated_trust_first.escalation.recall.toFixed(3)}</td>
                   </tr>
                   <tr>
                     <td className="py-2 text-[#1D1D1F]">Escalation F1</td>
                     <td className="py-2 text-[#6E6E73]">{evalResults.systems.trivial_baseline.escalation.f1.toFixed(3)}</td>
-                    <td className="py-2 text-[#6E6E73]">{evalResults.systems.simple_baseline.escalation.f1.toFixed(3)}</td>
-                    <td className="py-2 font-medium text-[#0071E3]">{evalResults.systems.calibrated_trust_first.escalation.f1.toFixed(3)}</td>
+                    <td className="py-2 font-medium text-[#1D1D1F]">{evalResults.systems.simple_baseline.escalation.f1.toFixed(3)}</td>
+                    <td className="py-2 text-[#6E6E73]">{evalResults.systems.calibrated_trust_first.escalation.f1.toFixed(3)}</td>
                   </tr>
                   <tr>
                     <td className="py-2 text-[#1D1D1F]">Escalation AUROC</td>
@@ -239,17 +239,34 @@ export const App: React.FC = () => {
               </table>
             </div>
 
-            {/* Retrieval impact callout */}
-            <div className="mt-5 p-4 bg-[#FAFAFA] border border-[#D2D2D7] rounded-xl text-[13px]">
-              <div className="font-medium text-[#1D1D1F] mb-1">
-                Precedent outcome reranking impact
+            {/* Retrieval & Pairwise callouts */}
+            <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div className="p-3.5 bg-[#FAFAFA] border border-[#D2D2D7] rounded-xl text-[12px]">
+                <div className="font-medium text-[#1D1D1F] mb-1">
+                  Outcome-Weighted Retrieval Impact
+                </div>
+                <div className="text-[#6E6E73] leading-relaxed">
+                  Reranking improved resolution score from{" "}
+                  <strong className="text-[#1D1D1F]">{evalResults.retrieval_impact.mean_resolution_before.toFixed(2)}</strong> to{" "}
+                  <strong className="text-[#2E7D5B]">{evalResults.retrieval_impact.mean_resolution_after.toFixed(2)}</strong> while maintaining{" "}
+                  <strong className="text-[#1D1D1F]">{(evalResults.retrieval_impact.hit_rate_after_reranking_alpha_0_6 * 100).toFixed(1)}%</strong> hit-rate.
+                </div>
               </div>
-              <div className="text-[#6E6E73] leading-relaxed">
-                Outcome-weighted reranking increased mean precedent resolution score from{" "}
-                <strong className="text-[#1D1D1F]">{evalResults.retrieval_impact.mean_resolution_before.toFixed(2)}</strong> to{" "}
-                <strong className="text-[#2E7D5B]">{evalResults.retrieval_impact.mean_resolution_after.toFixed(2)}</strong> while maintaining a{" "}
-                <strong className="text-[#1D1D1F]">{(evalResults.retrieval_impact.hit_rate_after_reranking_alpha_0_6 * 100).toFixed(1)}%</strong> top-3 relevance hit-rate.
-              </div>
+
+              {evalResults.pairwise_comparison && (
+                <div className="p-3.5 bg-[#FAFAFA] border border-[#D2D2D7] rounded-xl text-[12px]">
+                  <div className="font-medium text-[#1D1D1F] mb-1">
+                    Pairwise LLM-Judge Matchups
+                  </div>
+                  <div className="text-[#6E6E73] leading-relaxed">
+                    vs Trivial: <strong className="text-[#2E7D5B]">{(evalResults.pairwise_comparison.vs_trivial.win_rate * 100).toFixed(0)}% wins</strong> (180-0).
+                    <br />
+                    vs Simple: <strong className="text-[#0071E3]">{(evalResults.pairwise_comparison.vs_simple.win_rate * 100).toFixed(1)}% win</strong>,{" "}
+                    <strong>{(evalResults.pairwise_comparison.vs_simple.tie_rate * 100).toFixed(1)}% tie</strong>,{" "}
+                    <strong>{(evalResults.pairwise_comparison.vs_simple.loss_rate * 100).toFixed(1)}% loss</strong>.
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>

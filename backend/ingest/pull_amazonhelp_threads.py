@@ -14,13 +14,17 @@ from typing import Dict, List, Optional, Tuple
 
 
 def clean_tweet_text(text: str) -> str:
-    """Normalize tweet text, stripping t.co URLs and anonymized user handles."""
+    """Normalize tweet text, stripping t.co URLs, user handles, agent initials, and thread counters."""
     text = re.sub(r'https?://t\.co/\S+', '', text)
+    text = re.sub(r'https?://\S+', '', text)
     text = re.sub(r'@\d+', '', text)
     text = re.sub(r'@AmazonHelp\b', '', text, flags=re.I)
+    text = re.sub(r'\^[A-Za-z]{1,4}\b', '', text)
+    text = re.sub(r'\(?\b\d+/\d+\)?', '', text)
     text = re.sub(r'&amp;', '&', text)
     text = re.sub(r'&lt;', '<', text)
     text = re.sub(r'&gt;', '>', text)
+    text = re.sub(r':\s*(and|or|so|to|we|please)\b', r' \1', text, flags=re.I)
     text = re.sub(r'\s+', ' ', text).strip()
     return text
 

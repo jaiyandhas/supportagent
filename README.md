@@ -81,16 +81,16 @@ Evaluated on 180 golden cases stratified across 5 coarse categories, 11 sub-inte
 
 | Metric | Trivial Baseline | Simple Baseline | Trust-First Agent (Ours) | Context & Trade-offs |
 | :--- | :---: | :---: | :---: | :--- |
-| **Coarse Accuracy** | 0.706 | **0.756** | 0.728 | Simple baseline wins coarse; Trust-First prioritizes sub-intent & escalation |
+| **Coarse Accuracy** | 0.706 | **0.756** | 0.733 | Simple baseline wins coarse; Trust-First prioritizes sub-intent & escalation |
 | **Coarse Worst-Class F1** | 0.000 (`abuse_safety`, n=7) | 0.000 (`abuse_safety`, n=7) | 0.000 (`general_other`, n=10) | Support gap & out-of-taxonomy cold cases (caught by gate) |
-| **Sub-Intent Macro F1** | 0.062 | 0.131 | **0.240** | **0.240 absolute** (+83.2% relative gain); fine-grained split is hard |
-| **Escalation Precision** | 0.000 | 0.201 | **0.219** | **0.219 absolute** (+8.9% rel); conservative over-escalation bias |
-| **Escalation Recall** | 0.000 | **1.000** | 0.972 | Simple baseline achieves 1.000 trivially by escalating 100% |
-| **Escalation F1** | 0.000 | 0.335 | **0.357** | **0.357 absolute** (+6.5% relative gain) |
-| **Escalation AUROC** | 0.500 | 0.573 | **0.754** | **+31.6% relative gain** in ranking discrimination |
-| **Expected Calibration Error (ECE) ↓** | 0.000* | 0.483 | **0.369** | **-23.6% error reduction** (*Trivial 0.000 is degenerate constant artifact) |
-| **Brier Score Loss ↓** | 0.200 | 0.386 | **0.272** | **-29.5% improvement** in probabilistic accuracy |
-| **Judge Overall Score (1-5) ↑** | 2.64 | **4.33** | 4.12 | Simple baseline copies verbatim text while escalating 100% of traffic |
+| **Sub-Intent Macro F1** | 0.062 | 0.131 | **0.241** | **0.241 absolute** (+84.0% relative gain); fine-grained split is hard |
+| **Escalation Precision** | 0.000 | **0.236** | 0.224 | **0.224 absolute**; calibrated conservative safety bias |
+| **Escalation Recall** | 0.000 | 0.833 | **1.000** | **1.000** zero safety false negatives on golden set |
+| **Escalation F1** | 0.000 | **0.368** | 0.365 | Tuned baseline achieves 0.368 F1 at $\tau=0.35$ |
+| **Escalation AUROC** | 0.500 | 0.573 | **0.760** | **+32.6% relative gain** in ranking discrimination |
+| **Expected Calibration Error (ECE) ↓** | 0.000* | 0.482 | **0.368** | **-23.7% error reduction** (*Trivial 0.000 is degenerate constant artifact) |
+| **Brier Score Loss ↓** | 0.200 | 0.385 | **0.269** | **-30.1% improvement** in probabilistic accuracy |
+| **Judge Overall Score (1-5) ↑** | 2.64 | **4.18** | 4.12 | Simple copies verbatim historical text; Trust-First normalizes & defers |
 | **Mean Precedent Resolution Score** | — | 0.66 | **0.87** | Outcome reranked ($\alpha = 0.60$ Pareto optimal) |
 
 ---

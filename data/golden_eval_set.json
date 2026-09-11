@@ -842,7 +842,7 @@
   {
     "id": "eval_gold_071",
     "conversation_id": "0cdb65413cacf2597c360a6fa037ef01",
-    "customer_query": "hi , can you please help with order no 114-6790525-1580205! it was placed on 9/30 but hasn't shipped as of yet!",
+    "customer_query": "hi , can you please help with order no 114-6790525-1580205! it was placed on but hasn't shipped as of yet!",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
     "gold_should_escalate": false,
@@ -1478,7 +1478,7 @@
   {
     "id": "eval_gold_124",
     "conversation_id": "43d3b112509950aacc6e48f87baf788a",
-    "customer_query": "still I have not received my product n I received a mail from there end tha the address is incompletely (1/2)",
+    "customer_query": "still I have not received my product n I received a mail from there end tha the address is incompletely",
     "true_coarse_intent": "order_delivery",
     "true_sub_intent": "tracking_status_eta",
     "gold_should_escalate": false,

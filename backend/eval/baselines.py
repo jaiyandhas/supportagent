@@ -59,7 +59,7 @@ class SimpleBaselineAgent:
     def __init__(
         self,
         precedents_path: str = "data/historical_precedents.json",
-        fixed_similarity_threshold: float = 0.65
+        fixed_similarity_threshold: float = 0.35
     ):
         self.fixed_similarity_threshold = fixed_similarity_threshold
         with open(precedents_path, "r", encoding="utf-8") as f:

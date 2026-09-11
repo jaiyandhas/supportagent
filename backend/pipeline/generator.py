@@ -7,6 +7,7 @@ Supports dual generation modes:
 
 import os
 import json
+import re
 from typing import Dict, List, Optional, Tuple
 import requests
 
@@ -107,6 +108,14 @@ class ReplyGenerator:
         if precedents:
             top_prec = precedents[0]
             base_reply = top_prec.support_reply
+
+            # Strip raw Twitter scrape artifacts (e.g. ^SI, ^SK, (2/3), dangling colons, person names)
+            base_reply = re.sub(r'\^[A-Za-z]{1,4}\b', '', base_reply)
+            base_reply = re.sub(r'\(?\b\d+/\d+\)?', '', base_reply)
+            base_reply = re.sub(r':\s*(and|or|so|to|we|please)\b', r' \1', base_reply, flags=re.I)
+            base_reply = re.sub(r',\s+[A-Z][a-z]+(?=[.!?])', '', base_reply)
+            base_reply = re.sub(r'\s+', ' ', base_reply).strip()
+
             # Polish precedent into clean branded tone
             if not base_reply.startswith(("Hi", "Hello", "We're sorry", "Thanks for reaching")):
                 return f"Hello, thanks for reaching out. {base_reply}"
